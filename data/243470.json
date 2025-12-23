@@ -1,0 +1,107 @@
+{
+    "product_type": "game",
+    "name": "Watch_Dogs\u2122",
+    "steam_appid": 243470,
+    "short_description": "In today's hyper-connected world, Chicago operates under ctOS, the most advanced computer network in America.",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/header.jpg?t=1739177057",
+    "website": "http://www.watchdogsgame.com",
+    "pc_requirements": {
+        "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS *:</strong> Originally released for Windows 7, the game can be played on Windows 10 and Windows 11 OS<br></li><li><strong>Processor:</strong> Intel Core 2 Quad Q8400 @ 2.66Ghz or AMD Phenom II X4 940 @ 3.0Ghz<br></li><li><strong>Memory:</strong> 6 GB RAM<br></li><li><strong>Graphics:</strong> DirectX 11 graphics card with 1 GB Video RAM - Nvidia Geforce GTX 460 or AMD Radeon  HD 5770<br></li><li><strong>DirectX:</strong> Version 11<br></li><li><strong>Storage:</strong> 25 GB available space<br></li><li><strong>Sound Card:</strong> DirectX 9.0c Compatible Sound Card with Latest Drivers<br></li><li><strong>Additional Notes:</strong> Broadband connection and service required for multiplayer mode. Supported Video Cards at Time of Release: nVidia GeForce GTX460 or better, GT500, GT600, GT700 series;  AMD Radeon HD5850 or better, HD6000, HD7000, R7 and R9 series Intel\u00ae Iris\u2122 Pro HD 5200</li></ul>",
+        "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS *:</strong> Originally released for Windows 7, the game can be played on Windows 10 and Windows 11 OS<br></li><li><strong>Processor:</strong> Eight core - Intel Core  i7-3770 @3.5 GHz or AMD FX-8350 X8 @ 4 GHz<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> DirectX 11 graphics card with 2 GB Video RAM - Nvidia Geforce GTX 560 ti or AMD Radeon HD 7850<br></li><li><strong>DirectX:</strong> Version 11<br></li><li><strong>Storage:</strong> 25 GB available space<br></li><li><strong>Sound Card:</strong> DirectX 9.0c Compatible Sound Card with Latest Drivers<br></li><li><strong>Additional Notes:</strong> Broadband connection and service required for multiplayer mode. Supported Video Cards at Time of Release: nVidia GeForce GTX460 or better, GT500, GT600, GT700 series;  AMD Radeon HD5850 or better, HD6000, HD7000, R7 and R9 series Intel\u00ae Iris\u2122 Pro HD 5200</li></ul>"
+    },
+    "developers": [
+        "Ubisoft"
+    ],
+    "publishers": [
+        "Ubisoft"
+    ],
+    "platforms": {
+        "windows": true,
+        "mac": false,
+        "linux": false
+    },
+    "metacritic": {
+        "score": 77,
+        "url": "https://www.metacritic.com/game/pc/watch-dogs?ftag=MCD-06-10aaa1f"
+    },
+    "genres": [
+        "Action",
+        "Adventure"
+    ],
+    "screenshots": [
+        {
+            "id": 0,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_752aefdfdf2c55dfc8a94d1e9b8d9f6dd42a359c.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_752aefdfdf2c55dfc8a94d1e9b8d9f6dd42a359c.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 1,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_e898214ffaeef618f63e4171a4bd415e7a1f391b.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_e898214ffaeef618f63e4171a4bd415e7a1f391b.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 2,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_0ce6b9f9a11b038f9d1e5dcf12a5d9a9043e6c16.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_0ce6b9f9a11b038f9d1e5dcf12a5d9a9043e6c16.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 3,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_98649913909e245fb7c7f34fbcc8145ec662b1dc.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_98649913909e245fb7c7f34fbcc8145ec662b1dc.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 4,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_ad985b3cf8444e2fe1867b388bf5658a5a2bc3bc.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_ad985b3cf8444e2fe1867b388bf5658a5a2bc3bc.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 5,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_b2de18725a4da0bf539824b48b562922a8500299.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_b2de18725a4da0bf539824b48b562922a8500299.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 6,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_a9bd4c4fc828db47130d3c9a39c972a589adffb6.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_a9bd4c4fc828db47130d3c9a39c972a589adffb6.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 7,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_fc07f88aabd355dde6decf3c8c61cfd0ef964d7f.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_fc07f88aabd355dde6decf3c8c61cfd0ef964d7f.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 8,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_85b388c915972a4fd3730bf7b9bb5126245d8f19.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_85b388c915972a4fd3730bf7b9bb5126245d8f19.1920x1080.jpg?t=1739177057"
+        },
+        {
+            "id": 9,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_0411e96cf2a9007ad6e931f819a9ea4ef95e001b.600x338.jpg?t=1739177057",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_0411e96cf2a9007ad6e931f819a9ea4ef95e001b.1920x1080.jpg?t=1739177057"
+        }
+    ],
+    "movies": [
+        {
+            "id": 2031722,
+            "name": "Story Trailer - UK",
+            "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2031722/movie.293x165.jpg?t=1447361181",
+            "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/243470/19093/c9ed5a8ef8466abc7ce721cb60a51c712a33c450/1750486597/dash_av1.mpd?t=1447361181",
+            "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/243470/19093/c9ed5a8ef8466abc7ce721cb60a51c712a33c450/1750486597/dash_h264.mpd?t=1447361181",
+            "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/243470/19093/c9ed5a8ef8466abc7ce721cb60a51c712a33c450/1750486597/hls_264_master.m3u8?t=1447361181",
+            "highlight": true
+        },
+        {
+            "id": 2031731,
+            "name": "Welcome to Chicago - UK",
+            "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2031731/movie.293x165.jpg?t=1447361183",
+            "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/243470/19102/4cbc386b049e0489fe775e5a486745e1661f593c/1750486711/dash_av1.mpd?t=1447361183",
+            "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/243470/19102/4cbc386b049e0489fe775e5a486745e1661f593c/1750486711/dash_h264.mpd?t=1447361183",
+            "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/243470/19102/4cbc386b049e0489fe775e5a486745e1661f593c/1750486711/hls_264_master.m3u8?t=1447361183",
+            "highlight": true
+        }
+    ],
+    "release_date": {
+        "coming_soon": false,
+        "date": "26 May, 2014"
+    }
+}

@@ -67,7 +67,7 @@ a:hover {
 .result-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     background: var(--surface-color);
     color: var(--text-color);
     font-family: var(--font-family-base);
@@ -84,6 +84,17 @@ a:hover {
     /*width: 231px;
     height: 87px;*/
     object-fit: cover;
+}
+
+.result-item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.result-item div * {
+    margin: 0;
 }
 
 .result-item p {
