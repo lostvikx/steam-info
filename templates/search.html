@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    {% if search_query %}
+        <p>Results for: <strong>{{ search_query }}</strong></p>
+
+        <div class="results">
+            {% for game in search_results %}
+                <a href="/game/{{ game.id }}" class="result-item">
+                    <img src="{{ game.tiny_img }}" alt="{{ game.name }}">
+                    <div>
+                        <h3>{{ game.name }}</h3>
+                        <p>
+                            <span>{{ game.price.discount }}&percnt;</span>
+                            <span>{{ game.price.currency }}<s>{{ game.price.initial }}</s></span>
+                            <span>{{ game.price.currency }}{{ game.price.final }}</span>
+                        </p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+
+    {% else %}
+        <p>Error: No search query provided.</p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>

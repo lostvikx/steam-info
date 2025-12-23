@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #cba6f7;
+    --text-color: #cdd6f4;
+    --background-color: #1e1e2e;
+    --font-family-base: monospace, 'Courier New', Courier;
+    --font-size-base: 1rem;
+
+    --surface-color: #313244;
+    --surface-hover-color: #45475a;
+    --muted-text-color: #a6adc8;
+    --faded-text-color: #6c7086;
+
+    --accent-success: #a6e3a1;
+    --accent-warning: #f9e2af;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    padding: 2.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the container on the page */
+    padding: 0 1rem;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*gap: 0.5rem;*/
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--surface-color);
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+}
+
+.result-item:hover {
+    background: var(--surface-hover-color);
+    text-decoration: none;
+}
+
+.result-item img {
+    /*width: 231px;
+    height: 87px;*/
+    object-fit: cover;
+}
+
+.result-item p {
+    display: flex;
+    color: var(--muted-text-color);
+    gap: 1rem;
+}
+
+.result-item p span:first-child {
+    padding: 0 0.5rem;
+    color: var(--background-color);
+    background-color: var(--accent-success);
+    font-weight: 600;
+}
+
+.result-item p s {
+    color: var(--faded-text-color);
+}
+
+.result-item p span:last-child {
+    color: var(--accent-warning);
+    font-weight: 600;
+}
