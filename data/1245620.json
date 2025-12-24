@@ -1,0 +1,653 @@
+{
+    "product_type": "game",
+    "name": "ELDEN RING",
+    "steam_appid": 1245620,
+    "short_description": "THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1748630546",
+    "website": null,
+    "pc_requirements": {
+        "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 10<br></li><li><strong>Processor:</strong> INTEL CORE I5-8400 or AMD RYZEN 3 3300X<br></li><li><strong>Memory:</strong> 12 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB<br></li><li><strong>DirectX:</strong> Version 12<br></li><li><strong>Storage:</strong> 60 GB available space<br></li><li><strong>Sound Card:</strong> Windows Compatible Audio Device<br></li><li><strong>Additional Notes:</strong> </li></ul>",
+        "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 10/11<br></li><li><strong>Processor:</strong> INTEL CORE I7-8700K or AMD RYZEN 5 3600X<br></li><li><strong>Memory:</strong> 16 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB<br></li><li><strong>DirectX:</strong> Version 12<br></li><li><strong>Storage:</strong> 60 GB available space<br></li><li><strong>Sound Card:</strong> Windows Compatible Audio Device<br></li><li><strong>Additional Notes:</strong> </li></ul>"
+    },
+    "developers": [
+        "FromSoftware, Inc."
+    ],
+    "publishers": [
+        "FromSoftware, Inc.",
+        "Bandai Namco Entertainment"
+    ],
+    "price": {
+        "currency": "EUR",
+        "initial": 5999,
+        "final": 3899
+    },
+    "platforms": {
+        "windows": true,
+        "mac": false,
+        "linux": false
+    },
+    "metacritic": {
+        "score": 94,
+        "url": "https://www.metacritic.com/game/pc/elden-ring?ftag=MCD-06-10aaa1f"
+    },
+    "genres": [
+        "Action",
+        "RPG"
+    ],
+    "screenshots": [
+        {
+            "id": 0,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_943bf6fe62352757d9070c1d33e50b92fe8539f1.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_943bf6fe62352757d9070c1d33e50b92fe8539f1.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 1,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_dcdac9e4b26ac0ee5248bfd2967d764fd00cdb42.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_dcdac9e4b26ac0ee5248bfd2967d764fd00cdb42.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 2,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_3c41384a24d86dddd58a8f61db77f9dc0bfda8b5.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_3c41384a24d86dddd58a8f61db77f9dc0bfda8b5.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 3,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_e0316c76f8197405c1312d072b84331dd735d60b.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_e0316c76f8197405c1312d072b84331dd735d60b.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 4,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_ef61b771ee6b269b1f0cb484233e07a0bfb5f81b.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_ef61b771ee6b269b1f0cb484233e07a0bfb5f81b.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 5,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_b1b91299d7e4b94201ac840aa64de54d9f5cb7f3.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_b1b91299d7e4b94201ac840aa64de54d9f5cb7f3.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 6,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_510a02cf3045e841e180f2b77fb87545e0c8b59d.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_510a02cf3045e841e180f2b77fb87545e0c8b59d.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 7,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_c494372930ca791bdc6221eca134f2270fb2cb9f.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_c494372930ca791bdc6221eca134f2270fb2cb9f.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 8,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_fa6b881ef7c30522012ab2b2b83001e79baee093.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_fa6b881ef7c30522012ab2b2b83001e79baee093.1920x1080.jpg?t=1748630546"
+        },
+        {
+            "id": 9,
+            "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_c2baf8aada6140beee79d701d14043899e91af47.600x338.jpg?t=1748630546",
+            "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_c2baf8aada6140beee79d701d14043899e91af47.1920x1080.jpg?t=1748630546"
+        }
+    ],
+    "movies": [
+        {
+            "id": 256875461,
+            "name": "ELDEN RING Launch Trailer - EN PEGI",
+            "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256875461/movie.293x165.jpg?t=1646770165",
+            "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/1245620/442795/6737a88c08ea73e0b32e8087634d6e78efc25055/1750650341/dash_av1.mpd?t=1646770165",
+            "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/442795/6737a88c08ea73e0b32e8087634d6e78efc25055/1750650341/dash_h264.mpd?t=1646770165",
+            "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/442795/6737a88c08ea73e0b32e8087634d6e78efc25055/1750650341/hls_264_master.m3u8?t=1646770165",
+            "highlight": true
+        },
+        {
+            "id": 256860545,
+            "name": "ELDEN RING Pre-order Trailer - EN PEGI",
+            "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256860545/movie.293x165.jpg?t=1646817735",
+            "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/1245620/417206/d36af9dd9579a3e525df358f47d2f742ecf2a3f2/1750650057/dash_av1.mpd?t=1646817735",
+            "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/417206/d36af9dd9579a3e525df358f47d2f742ecf2a3f2/1750650057/dash_h264.mpd?t=1646817735",
+            "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/417206/d36af9dd9579a3e525df358f47d2f742ecf2a3f2/1750650057/hls_264_master.m3u8?t=1646817735",
+            "highlight": true
+        },
+        {
+            "id": 256845668,
+            "name": "ELDEN RING Official Gameplay Trailer - EN PEGI",
+            "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256845668/movie.293x165.jpg?t=1646817775",
+            "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/1245620/390593/0174075572c1df7202d692c0aa0265aaa24d3b50/1750649924/dash_av1.mpd?t=1646817775",
+            "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/390593/0174075572c1df7202d692c0aa0265aaa24d3b50/1750649924/dash_h264.mpd?t=1646817775",
+            "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/390593/0174075572c1df7202d692c0aa0265aaa24d3b50/1750649924/hls_264_master.m3u8?t=1646817775",
+            "highlight": true
+        },
+        {
+            "id": 256875456,
+            "name": "ELDEN RING 101 Trailer - EN PEGI",
+            "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256875456/movie.293x165.jpg?t=1646770174",
+            "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/1245620/442787/3449e29a441517a2d16aa761f442c3724feac5e6/1750650328/dash_av1.mpd?t=1646770174",
+            "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/442787/3449e29a441517a2d16aa761f442c3724feac5e6/1750650328/dash_h264.mpd?t=1646770174",
+            "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/442787/3449e29a441517a2d16aa761f442c3724feac5e6/1750650328/hls_264_master.m3u8?t=1646770174",
+            "highlight": true
+        },
+        {
+            "id": 256864453,
+            "name": "ELDEN RING CGI Trailer - EN PEGI",
+            "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256864453/movie.293x165.jpg?t=1646817705",
+            "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/1245620/423853/d18cd60db7dbb6133c25505e5cba3db692c48c76/1750650209/dash_av1.mpd?t=1646817705",
+            "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/423853/d18cd60db7dbb6133c25505e5cba3db692c48c76/1750650209/dash_h264.mpd?t=1646817705",
+            "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/1245620/423853/d18cd60db7dbb6133c25505e5cba3db692c48c76/1750650209/hls_264_master.m3u8?t=1646817705",
+            "highlight": true
+        }
+    ],
+    "release_date": {
+        "coming_soon": false,
+        "date": "24 Feb, 2022"
+    },
+    "background_raw": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/page_bg_raw.jpg?t=1748630546",
+    "score": 0.77,
+    "tier": "gold",
+    "total": 1932,
+    "review_summary": {
+        "description": "Very Positive",
+        "total_positive": 393401,
+        "total_negative": 23886,
+        "total_reviews": 417287
+    },
+    "reviews": [
+        {
+            "recommendationid": "212333237",
+            "author": {
+                "steamid": "76561198054477457",
+                "num_games_owned": 107,
+                "num_reviews": 47,
+                "playtime_forever": 4475,
+                "playtime_last_two_weeks": 0,
+                "playtime_at_review": 4475,
+                "last_played": 1764537079
+            },
+            "language": "english",
+            "review": "Elden Ring felt like it\u2019s the culmination of all FromSoftware games that came before it. It\u2019s everything they learned from them and more. If you\u2019ve played other FromSoftware games, you\u2019ll stumble upon a lot of familiar things, scenarios, locations, enemies, bullshit, and they took all that and put it in a huge open world map.\n\nThe map itself is vague. If you like the \u201czero hands holding\u201d approach, this is your game. Not only do you not know what to do next, but things are hard as they are in your average souls experience, you wander into the wrong neighborhood, and there goes all your runes.\n\nThis is the most polished experience from the series. It\u2019s visually beautiful and beautifully crafted, the world has much variety, some copy pasted landmarks but also lots of unique places with good interiors and architecture. I know some people complain that some enemies repeat, but even with that, there are tons of variety in this aspect as well.\n\nUnlocked new fear of insects, centipedes, ants, fingers? They replaced spiders with fingers, and I don't know which is worse now... \n\nI have mixed feelings about the gameplay. For most people, they nailed the combat in this one, and it's true, but there are some annoying things. \n\nUnlike DS2, you can attack and dodge quite a lot before running out of stamina, which promotes faster gameplay, and that's usually what people seek and enjoy. To balance that, bosses also unleash a fury of successive fast attacks, and sometimes the window during which you can attack without being punished is really small, so the fight ends up with more downtime (defense time) than attacking, and that can be boring. \n\nI'm not talking about op builds and cheeses, those exist, but I'm speaking of a normal first playthrough experience. \n\nIt feels like mobs don't have a stamina bar as u do. That was a nice feature from Nioh, being able to see the enemy's stamina bar. \n\nAnother issue is how huge bosses are, now it's not new, but man, it's becoming ridiculous. I know people loove to fight big bosses, but I use M&K because I like complete camera control, and even then, I don't even see all the boss. Some fights I don't see the hit because it's impossible to have all the boss within the camera frame, neither by locking the view nor by unlocking it. \n\nOther than that, I absolutely love the animations, the weapon variety, the spell effects, the class variety, and mix and matching, all the new features are fun to play with. \n\nOn a more personal note, even though this game has everything, even things from previous souls games, more features, more work into it, I still think that experiencing similar features was more iconic in previous titles. If you're new to the genre, this game is a fantastic place to start. It has everything, and it's modern, but for me, I still find DS1 to be the most iconic and the most beautiful journey, but maybe cause I played it first, we will never know.",
+            "timestamp_created": 1764605866,
+            "timestamp_updated": 1764605866,
+            "voted_up": true,
+            "votes_up": 48,
+            "votes_funny": 4,
+            "weighted_vote_score": "0.705624043941497803",
+            "comment_count": 5,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213584037",
+            "author": {
+                "steamid": "76561198068186597",
+                "num_games_owned": 0,
+                "num_reviews": 4,
+                "playtime_forever": 6316,
+                "playtime_last_two_weeks": 0,
+                "playtime_at_review": 6316,
+                "last_played": 1689537384
+            },
+            "language": "english",
+            "review": "Disclaimer: For most people, I actually would recommend the game. But, for me personally, the more time passes the more flaws I see in the game, and my ultimate opinion on it is that it contains an all-time great game, but also a lot of junk that was never a problem in FromSoft's older titles.\n\nObviously the visual art is masterful. Obviously the music is some of the best ever to grace a video game. Obviously getting a big stick to beat your enemies' asses with while you roll around like a madman is awesome. Obviously the spectacle and beauty of the environments and bosses are breathtaking. All of these things can also be said about every previous soulsborne game.\n\nUnfortunately, this game also contains a humongous map that is honestly exhausting to explore, and frequently that exploration rewards you with discovering a copy-pasted mine/cave that probably has some loot at the end that you will never use. The huge map also spreads its scant cast of NPCs further out than ever before, taking an obtuse and mysterious NPC quest system present in Dark Souls and stretching it to the point of being literally impossible for me to keep track of. You will run into NPCs that you haven't seen in 10 or 20 hours, and without a guide, how am I possibly supposed to remember what they said to me last time and know how to progress their storylines? It's just, \"Huh, there is that weird guy I met like 2 IRL weeks ago. He looks cool, but what is he even doing again?\" Simply put, the game is too big and too long for me, it just gets tiring and cumbersome, I seriously just wanted it to be over by the time I was 75% of the way through.\n\nI'm also not a fan of a lot of the boss fights. It takes a problem that started in Dark Souls 3 and cranks it up even further, which is the design idea of, \"If we just put a bonfire right outside the boss arena, we can make it a 3-phase clusterjam with movement cancelling and 69 different attacks for the player to memorize, and it won't matter if the player dies 20+ times because they can immediately retry!\" Too me, this is so much less fun than the classic Dark Souls 1/2 challenge of battling your way through a gauntlet of enemies and traps and then fighting a challenging, but not overloaded boss as the cherry on top. It used to feel like a boss fight was your opportunity to prove that you have mastered an area and are ready to move on. In Elden Ring, a lot of boss fights feel like a tacked-on reflex and memorization challenge that is separate from the challenge of the area itself.\n\nWhile I can appreciate that FromSoft tried going bigger and grander, I ultimately feel like they lost some of the old magic along the way, and Elden Ring ended up being annoying and fatiguing in a way that their previous titles never were for me. What a shame, as this is clearly their biggest hit, so I guess I'm in the minority. I can squint and see a 10/10 life-changing game in it, but ultimately the size and length of the game, some of the ridiculously complex bosses, and the copy-pasted open world elements distract from the solid core and drag the experience down. I can confidently say I won't be replaying this game, unlike Dark Souls 1 and 2, Bloodborne, and Armored Core 6, which all sound very enticing to return to.",
+            "timestamp_created": 1766082668,
+            "timestamp_updated": 1766082668,
+            "voted_up": false,
+            "votes_up": 125,
+            "votes_funny": 5,
+            "weighted_vote_score": "0.636528134346008301",
+            "comment_count": 4,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213312107",
+            "author": {
+                "steamid": "76561198086828922",
+                "num_games_owned": 0,
+                "num_reviews": 11,
+                "playtime_forever": 16929,
+                "playtime_last_two_weeks": 0,
+                "playtime_at_review": 16929,
+                "last_played": 1753061728
+            },
+            "language": "english",
+            "review": "I don't need to tell you that Elden Ring is a marvel of game design. There will, for better or worse, probably never be another game like it. I have never inhabited a world so deeply considered and detailed than the Lands Between, each step you take carries with it the footsteps of generations past. It's beautiful! If you care for a world with layers upon layers of history and civilization, Elden Ring is a tasty fuckin meal. Of course, as always, From's combat is top-notch. \r\nIt is not a perfect game, but it is truly, truly magical for your first playthrough. My gripes are common refrains too - too many repeated enemies and bosses, the world is a little too big for its own good. Comes together to deserve every last bit of praise it gets, though.",
+            "timestamp_created": 1765748305,
+            "timestamp_updated": 1765748305,
+            "voted_up": true,
+            "votes_up": 10,
+            "votes_funny": 1,
+            "weighted_vote_score": "0.622072100639343262",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213579299",
+            "author": {
+                "steamid": "76561198975329508",
+                "num_games_owned": 260,
+                "num_reviews": 3,
+                "playtime_forever": 11578,
+                "playtime_last_two_weeks": 1,
+                "playtime_at_review": 11578,
+                "last_played": 1766074900
+            },
+            "language": "english",
+            "review": "Maidenless? Not Anymore. I came to the Lands Between with zero expectations and left with emotional damage, a broken controller, and 200+ hours played. Elden Ring is not just a game \u2014 it\u2019s an obsession.\n\n\u201cWhat\u2019s that in the distance?\u201d (worst mistake of my life) Elden Ring\u2019s open world is basically a trap. You see something cool far away, ride Torrent towards it, and suddenly you\u2019re fighting a boss you were definitely not supposed to meet yet. And somehow\u2026 that\u2019s the fun. No markers screaming at you, no hand-holding \u2014 just curiosity, punishment, and eventually triumph.\n\nGit Gud, But Fair. Yes, it\u2019s hard. Yes, you will die. A lot.\nBut every death feels like your fault. Every boss \u2014 from Margit teaching you humility, to Malenia reminding you that she has never known defeat \u2014 exists to test your patience, not waste your time. When you finally win, the dopamine hit is unreal.\n\nElden Ring doesn\u2019t tell you its story. It dares you to discover it.\nGodfrey\u2019s exile, Marika\u2019s defiance, Radahn holding back the stars while rotting, Ranni\u2019s long game\u2026 the lore is deep, tragic, and beautifully fragmented. If you enjoy piecing together stories from item descriptions at 3 AM, this game will ruin you (in the best way).\n\nArt Direction That Carries the Game The moment the soundtrack swells during a boss fight, you feel it. From Limgrave\u2019s calm despair to Leyndell\u2019s golden decay, the world tells its own story without saying a word.\n\n\u201cI started Elden Ring as a newcomer, and finished it having played every FromSoftware game \u2014 that alone should tell you what kind of masterpiece this is.\u201d",
+            "timestamp_created": 1766077827,
+            "timestamp_updated": 1766077827,
+            "voted_up": true,
+            "votes_up": 7,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.568831086158752441",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "212639642",
+            "author": {
+                "steamid": "76561198816744206",
+                "num_games_owned": 0,
+                "num_reviews": 5,
+                "playtime_forever": 8339,
+                "playtime_last_two_weeks": 0,
+                "playtime_at_review": 8339,
+                "last_played": 1748884226
+            },
+            "language": "english",
+            "review": "Amazing game. I had a few crashes (had to play in windowed to stop that). But apart from that in my 139 hours on the game I had nothing but fun!",
+            "timestamp_created": 1764966390,
+            "timestamp_updated": 1764966390,
+            "voted_up": true,
+            "votes_up": 5,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.563628792762756348",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213591461",
+            "author": {
+                "steamid": "76561198004690586",
+                "num_games_owned": 0,
+                "num_reviews": 48,
+                "playtime_forever": 6471,
+                "playtime_last_two_weeks": 530,
+                "playtime_at_review": 6185,
+                "last_played": 1766132163
+            },
+            "language": "english",
+            "review": "I like this game a lot. \r\n\r\nThere's a lot of content and it can be a little overwhelming at first, but it's incredible that Fromsoft managed to make an open world souls game that gives you enough cool shit to find in areas that are distinct enough that you never really get bored of wanting to see what's behind the next door. \r\n\r\nIf you're going to play with friends I'd recommend the Seamless Co-Op mod because it just allows for a more consistent playthrough, though a bit buggy at times.",
+            "timestamp_created": 1766089519,
+            "timestamp_updated": 1766089519,
+            "voted_up": true,
+            "votes_up": 3,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.545454561710357666",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213266956",
+            "author": {
+                "steamid": "76561199074160855",
+                "num_games_owned": 121,
+                "num_reviews": 14,
+                "playtime_forever": 9336,
+                "playtime_last_two_weeks": 0,
+                "playtime_at_review": 9336,
+                "last_played": 1753450579
+            },
+            "language": "english",
+            "review": "one of the most best game im to play in life and amazing gameplay\nfrom when i got birthed until this day now i discover this game to play i was not aware game of souls and bound like really is good to play and fun to take a sword and kill enemies because i say its was great to play they all looks the same of souls and bound like but elden ring was looks different because its have very cool boss and amazing combat\nfor me its was a amazing and still its is the best souls and bound like play even better of lies of pee \nits was amazing to play and or choice at ending was best of time! or say tarnished?!\n",
+            "timestamp_created": 1765707149,
+            "timestamp_updated": 1765707149,
+            "voted_up": true,
+            "votes_up": 2,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.545454561710357666",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213689665",
+            "author": {
+                "steamid": "76561198383941979",
+                "num_games_owned": 43,
+                "num_reviews": 2,
+                "playtime_forever": 15702,
+                "playtime_last_two_weeks": 208,
+                "playtime_at_review": 15494,
+                "last_played": 1766592487
+            },
+            "language": "english",
+            "review": "200ish hrs for took 3 uniq ending + dlc. It's such fun and exciting experience for the first time took souls-like game with pretty immersive open world, but the minus didn't have a journal to give clue for npc quest. but still if you invest pretty much of hrs to discover all the content, the minus wouldn't be matters.",
+            "timestamp_created": 1766195922,
+            "timestamp_updated": 1766195922,
+            "voted_up": true,
+            "votes_up": 5,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.541666686534881592",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213686938",
+            "author": {
+                "steamid": "76561197998352801",
+                "num_games_owned": 333,
+                "num_reviews": 25,
+                "playtime_forever": 4019,
+                "playtime_last_two_weeks": 0,
+                "playtime_at_review": 4019,
+                "last_played": 1717264743
+            },
+            "language": "english",
+            "review": "My comment is mainly aimed at people who... like me are not huge JRPG or die & retry players and are thinking of trying Elden Ring as they first FromSoftware game. Because I think everyone else reading this, will most likely love this game. You still might be like me and hate it despite your best efforts. I actually wish I hadn't bought it or put so much time into it.\n\nI've logged 60h+ because of a friend of mine who is a huge fan, convinced me to play co-op. So he held my hand and helped me (basically carried me) for the whole adventure.\n\n- While the game is overall showcasing beautiful landscapes and epic scale, I can't get past the \"dated\" look it has in terms of noisiness in detail, the dirty textures, the illogical structures  and somewhat empty flat barren lands of nothing. I can't really get behind the generic look of some of the maidens or some of the un-describable monsters. That isn't to say there aren't pretty areas or characters, but it felt hugely inconsistent to me.\n- I didn't feel like I experienced much of a story, or narrative elements beyond a few cutscenes, and obscure dialogues sprinkled across hours of gameplay. I am also the kind of player who needs a journal/quest log of some kind, to understand or remember what I've found, what I'm doing... and how any of that matters.\n- The inventory, dialogue prompts, consumable/equipment switching all felt really clunky and badly designed to me. Like why do you'd have to make sure to talk to an NPC 6-8 times in a row to make sure you exhausted all topics with them to receive a reward... the only way to know ?? Another player who did it before...\n- I kind of got the idea of the combat where you want to be meticulous and not button spammy... but I swear my weapon went through the enemies more than half of the time, and yet I'd go flying if they so much as looked at me funny.\n- Quests and object unlocks and secrets and ridiculous platforming that all seem to be tied to \"you just had to know, be incredibly stubborn/curious or did it by accident by playing this as if you were a game tester\" Spending literally 20 minutes scaling a wall that doesn't look climbable, all to drop down somewhere to pick up one rare item that you wouldn't even know was there....\n\nSo....... even after 60h... I didn't like the game. I was not having fun and as much as I wanted to join my friend in his enthusiasm for FromSoftware games... I kept finding more things against it...\n\n\n\n\n",
+            "timestamp_created": 1766192723,
+            "timestamp_updated": 1766192723,
+            "voted_up": false,
+            "votes_up": 7,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.537562847137451172",
+            "comment_count": 1,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "211589762",
+            "author": {
+                "steamid": "76561199383903259",
+                "num_games_owned": 144,
+                "num_reviews": 42,
+                "playtime_forever": 4725,
+                "playtime_last_two_weeks": 0,
+                "playtime_at_review": 4725,
+                "last_played": 1761731292
+            },
+            "language": "english",
+            "review": "Elden Ring is a masterpiece. The open world, combat, and atmosphere are insane every boss fight feels intense and rewarding. You truly feel lost in a beautiful, dangerous world. Totally worth every minute.",
+            "timestamp_created": 1764402491,
+            "timestamp_updated": 1764402491,
+            "voted_up": true,
+            "votes_up": 3,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.532250106334686279",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213900528",
+            "author": {
+                "steamid": "76561198115617885",
+                "num_games_owned": 0,
+                "num_reviews": 9,
+                "playtime_forever": 207,
+                "playtime_last_two_weeks": 68,
+                "playtime_at_review": 207,
+                "last_played": 1766123571
+            },
+            "language": "english",
+            "review": "The dev of this game is overrated af. They haven't put the Playstation controllers mapping on PC into the game after nearly 4 years with a crazy amount of copies sold. Another thing is that they don't care about people who do not live in English speaking countries because if you buy this game on Playstation outside of non-English countries, you might not even get to play the game in English version which makes it a big struggle for me to play with the weird ass translations in my Native language which is Thai. So I feel like the dev of this game doesn't really care much about feedbacks and are just lucky to have the fans protecting them all the time even on reddit (about the playstation controller mapping etc.) I see a lot of complaints on the languages too and still haven't received any changes since the release also.",
+            "timestamp_created": 1766396768,
+            "timestamp_updated": 1766396768,
+            "voted_up": false,
+            "votes_up": 3,
+            "votes_funny": 1,
+            "weighted_vote_score": "0.53060305118560791",
+            "comment_count": 1,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "210285411",
+            "author": {
+                "steamid": "76561198771530731",
+                "num_games_owned": 9,
+                "num_reviews": 7,
+                "playtime_forever": 3950,
+                "playtime_last_two_weeks": 1300,
+                "playtime_at_review": 2391,
+                "last_played": 1766580530
+            },
+            "language": "english",
+            "review": "They weren't kidding when they said this game was hard. 40 hours of pure agony. 40 hours of constant death. 40 hours of regret, sweat, and self-loathing... But I finally did it. I finally beat Soldier of Godrick.",
+            "timestamp_created": 1764041307,
+            "timestamp_updated": 1764042418,
+            "voted_up": true,
+            "votes_up": 5,
+            "votes_funny": 2,
+            "weighted_vote_score": "0.528795838356018066",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "212913779",
+            "author": {
+                "steamid": "76561199482147765",
+                "num_games_owned": 0,
+                "num_reviews": 9,
+                "playtime_forever": 10930,
+                "playtime_last_two_weeks": 1207,
+                "playtime_at_review": 8692,
+                "last_played": 1765658414
+            },
+            "language": "english",
+            "review": "Elden Ring is one of the most impressive games I have ever experienced. The open world feels huge, alive, and full of mysteries. Every location is unique, beautifully designed, and invites you to explore. The atmosphere ranges from mystical and calm to dark and overwhelming and that\u2019s exactly what makes the game so captivating.\r\n\r\nThe soundtrack is absolutely masterful. The music fits perfectly in every situation, whether during exploration, intense boss fights, or quiet moments. It enhances the mood, builds tension, and often creates pure goosebumps.\r\n\r\nThe bosses are another major highlight. They are creatively designed, challenging, and incredibly epic in their presentation. Every fight feels like a special event. The lore and story, which gradually unfold, add a lot of depth and make the world even more fascinating.\r\n\r\nFor me, Elden Ring comes incredibly close to being a perfect game. It\u2019s very near to what I would call a truly flawless and outstanding experience.\r\n\r\nElden Ring is an absolute masterpiece full of atmosphere, excitement, and unforgettable moments. A clear recommendation.",
+            "timestamp_created": 1765287045,
+            "timestamp_updated": 1765287045,
+            "voted_up": true,
+            "votes_up": 5,
+            "votes_funny": 1,
+            "weighted_vote_score": "0.528357088565826416",
+            "comment_count": 1,
+            "steam_purchase": true,
+            "received_for_free": true,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213957182",
+            "author": {
+                "steamid": "76561199087680633",
+                "num_games_owned": 0,
+                "num_reviews": 2,
+                "playtime_forever": 5388,
+                "playtime_last_two_weeks": 2688,
+                "playtime_at_review": 4789,
+                "last_played": 1766563846
+            },
+            "language": "english",
+            "review": "i can no longer play on any of my saves due to the game thinking i had the dlc installed but i never owned the dlc in the first place and so now im out money",
+            "timestamp_created": 1766447176,
+            "timestamp_updated": 1766447176,
+            "voted_up": false,
+            "votes_up": 2,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.527516782283782959",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "214090950",
+            "author": {
+                "steamid": "76561199252479612",
+                "num_games_owned": 0,
+                "num_reviews": 4,
+                "playtime_forever": 8265,
+                "playtime_last_two_weeks": 41,
+                "playtime_at_review": 8256,
+                "last_played": 1766590503
+            },
+            "language": "english",
+            "review": "I have tried everthing to fix the sputtering issues and yet my game still lags and always defults to windowed mode and i can only change it in the files of the game what the hell has happend to a gave I have loved how has it fell into utter direpair",
+            "timestamp_created": 1766589838,
+            "timestamp_updated": 1766589838,
+            "voted_up": false,
+            "votes_up": 1,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.523809552192687988",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "214044636",
+            "author": {
+                "steamid": "76561198970661331",
+                "num_games_owned": 0,
+                "num_reviews": 1,
+                "playtime_forever": 455,
+                "playtime_last_two_weeks": 455,
+                "playtime_at_review": 296,
+                "last_played": 1766600543
+            },
+            "language": "english",
+            "review": "I mean, its Elden Ring, its one of the best games i've ever played how many positive reviews do we need, there are some bad things but like, does it matter? \r\nI LOVE MESSMER",
+            "timestamp_created": 1766536555,
+            "timestamp_updated": 1766536555,
+            "voted_up": true,
+            "votes_up": 1,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.523809552192687988",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "214039892",
+            "author": {
+                "steamid": "76561198054500690",
+                "num_games_owned": 0,
+                "num_reviews": 4,
+                "playtime_forever": 788,
+                "playtime_last_two_weeks": 742,
+                "playtime_at_review": 674,
+                "deck_playtime_at_review": 113,
+                "last_played": 1766593089
+            },
+            "language": "english",
+            "review": "I cannot recommend this game in the state of the PC port. \r\n\r\nIt hard freezes (not a full crash) for 10-20 seconds randomly and frequently. I've scoured the internet for a fix with no luck. In my search for a fix, I have found that A LOT of people are running into this freezing/stuttering issue. It is incredibly irritating and completely kills my enjoyment of an otherwise fantastic video game.",
+            "timestamp_created": 1766531713,
+            "timestamp_updated": 1766531713,
+            "voted_up": false,
+            "votes_up": 1,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.523809552192687988",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213984337",
+            "author": {
+                "steamid": "76561199043084432",
+                "num_games_owned": 254,
+                "num_reviews": 50,
+                "playtime_forever": 14313,
+                "playtime_last_two_weeks": 0,
+                "playtime_at_review": 14313,
+                "last_played": 1764881746
+            },
+            "language": "english",
+            "review": "Ah.. Elden Ring. Seni incelemek, \u0130stanbul\u2019a benziyor. Biraz tatl\u0131, biraz ac\u0131. Biraz emin, biraz de\u011fil. \u00dcz\u00fcml\u00fc kekim mi diyeyim, kabusum mu? Karar vermem g\u00fc\u00e7.\n\nEvet, \u00fcstte belirtti\u011fim gibi. Zor, bir o kadar da g\u00fczel bir oyun. Yoran, bir o kadar da haz veren bir oyun. \u0130stanbul misali. \n\nElden ring her \u015feyden \u00f6nce muazzam d\u00f6v\u00fc\u015f mekanikleri olan, m\u00fckemmel atmosferi bulunan, zorlay\u0131c\u0131, etkileyici bir oyun diyerek ba\u015flamak isterim. Gaming d\u00fcnyas\u0131n\u0131n olmazsa olmaz\u0131 gibi bir oyun bu. Soulslike\u2019\u0131 sevdirecek boyutlarda ba\u015far\u0131l\u0131. Fakat \u00f6yle bir s\u0131k\u0131nt\u0131s\u0131 var ki, siz sormay\u0131n ben s\u00f6ylemeyeyim. \n\nOyunda bir mod kurulumu yard\u0131m\u0131yla duo oynayabiliyorsunuz. Fakat bunun bir dezavantaj\u0131 olacak. E\u011fer duo\u2019ysan\u0131z, s\u00fcrekli oyun d\u00fcnyan\u0131z\u0131n raid yemesine haz\u0131r olun. Bu raidler o kadar sa\u00e7ma, o kadar aptalca ki, t\u00fcm oyunun g\u00fczelli\u011fini g\u00f6lgeliyor adeta. \n\nAnlamland\u0131ramad\u0131\u011f\u0131m bir \u015fekilde pvpsi her daim lagl\u0131. 10000 megabit internete de sahip olsan, vuru\u015flar hep lagl\u0131 bir \u015fekilde rakibe gidiyor. Vurdu\u011fun halde can\u0131n\u0131 azaltam\u0131yorsun. \u0130\u015fin PvP k\u0131sm\u0131nda dodge sisteminde s\u0131k\u0131nt\u0131 var. \n\nDaha da garibi, bu raid esnas\u0131nda ger\u00e7ekle\u015fen PvP d\u00fcellosunun, hi\u00e7bir \u015fekilde adil olmay\u0131\u015f\u0131. Gelen ki\u015fi itemsel ve level olarak sizden \u00e7ok da g\u00fc\u00e7l\u00fc oluyor. Bundan da sa\u00e7mas\u0131, siz bir boss fight\u2019\u0131n\u0131n ortas\u0131nda raid yiyorsunuz ve eksik pot\u2019la oynaman\u0131z gerekiyor. S\u0131rf bu sebeple oyuna dislike atas\u0131m var, ama bunu yapmad\u0131m. \u00c7\u00fcnk\u00fc bu, haks\u0131zl\u0131k ve duygular\u0131mla hareket ederek yapt\u0131\u011f\u0131m bir puanlama olurdu.\n\nAl\u0131n\u0131z efendim. \u0130ndirimde ka\u00e7\u0131rmay\u0131n\u0131z bu oyunu. Al\u0131p da bir g\u00fcn oynar\u0131m bea diyerek de almay\u0131n\u0131z. Hemen indirip ba\u015flay\u0131n\u0131z. Pi\u015fman olaca\u011f\u0131n\u0131z\u0131 sanm\u0131yorum.\n\nKeyifli oyular.",
+            "timestamp_created": 1766480807,
+            "timestamp_updated": 1766480807,
+            "voted_up": true,
+            "votes_up": 1,
+            "votes_funny": 1,
+            "weighted_vote_score": "0.523809552192687988",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213923505",
+            "author": {
+                "steamid": "76561199138165037",
+                "num_games_owned": 95,
+                "num_reviews": 10,
+                "playtime_forever": 8028,
+                "playtime_last_two_weeks": 168,
+                "playtime_at_review": 7955,
+                "last_played": 1766423441
+            },
+            "language": "english",
+            "review": "Tree Sentinel is not optional, must kill him to progress",
+            "timestamp_created": 1766418862,
+            "timestamp_updated": 1766418862,
+            "voted_up": true,
+            "votes_up": 1,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.523809552192687988",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        },
+        {
+            "recommendationid": "213880411",
+            "author": {
+                "steamid": "76561197996773912",
+                "num_games_owned": 0,
+                "num_reviews": 11,
+                "playtime_forever": 14023,
+                "playtime_last_two_weeks": 8429,
+                "playtime_at_review": 13941,
+                "last_played": 1766401831
+            },
+            "language": "english",
+            "review": "I am obviously not the typical Souls player. I liked Sekiro and Bloodborne and to a lesser extent DS1, 2 and 3, but I just found this to be dragged out way too much, be way to focused on making specific builds and so much essential stuff being hid around the massive world. It was just too much and not explained in any way. \r\n\r\nOften losing track of what you were supposed to do when sidetracked by some dungeon, and often you find yourself in areas that you are way underleveled for. Last part was especially aggregios to me, because the game felt more like a mmorpg grind rather than a souls-experience. Also, a ton of essential stuff is hidden in dungeons or other maps that are theoretically \"optional\".\r\n\r\nAt the end, I just wanted the game to be over so I could call it a day and not feel like I wasted my money, but that is more on me and my stubbornness I guess. Felt relief to be done with the bosses more so than accomplishment like I did with other entries. Especially because some had cutscenes you had to skip every time, some had annoying walk-backs, and others had annoying, tedious first phases. \r\n\r\nI understand why people like it. But I personally found it way too much, given the typical amount of repetition you need to do in order to progress a boss. A lot ended up feeling more like a chore than something I really wanted to progress because I couldn't wait to experience what was next.",
+            "timestamp_created": 1766370670,
+            "timestamp_updated": 1766370670,
+            "voted_up": false,
+            "votes_up": 1,
+            "votes_funny": 0,
+            "weighted_vote_score": "0.523809552192687988",
+            "comment_count": 0,
+            "steam_purchase": true,
+            "received_for_free": false,
+            "written_during_early_access": false,
+            "primarily_steam_deck": false
+        }
+    ]
+}

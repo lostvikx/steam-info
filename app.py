@@ -1,7 +1,8 @@
 import os
 import json
 from flask import Flask, render_template, request
-# from fetch import fetch_search_results, fetch_game_info
+from time import sleep
+
 from utils import fetch
 
 app = Flask(__name__)
@@ -28,21 +29,27 @@ def search():
     return render_template("search.html", search_query=search_query, search_results=search_results)
 
 
-@app.route("/game/<int:appid>")
+@app.route("/game/<string:appid>")
 def game_page(appid):
 
     data_path = f"data/{appid}.json"
     if os.path.isfile(data_path):
         with open(data_path, "r") as f:
-            game_info = json.load(f)
-            return render_template("game.html", appid=appid, game_info=game_info)
+            merged_game_info = json.load(f)
+            return render_template("game.html", appid=appid, merged_game_info=merged_game_info)
 
-    game_info = fetch.game_info(str(appid))
+    game_info = fetch.game_info(appid)
+    sleep(2)
+    proton_report = fetch.proton_report(appid)
+    sleep(2)
+    reviews = fetch.steam_reviews(appid, "positive")
+
+    merged_game_info = {**game_info, **proton_report, **reviews}
 
     with open(data_path, "w") as f:
-        json.dump(game_info, f, indent=4)
+        json.dump(merged_game_info, f, indent=4)
 
-    return render_template("game.html", appid=appid, game_info=game_info)
+    return render_template("game.html", appid=appid, merged_game_info=merged_game_info)
 
 
 if __name__ == "__main__":

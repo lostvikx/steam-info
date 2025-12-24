@@ -1,158 +1,78 @@
 [
     {
-        "name": "Watch_Dogs\u00ae 2",
-        "id": 447040,
+        "name": "ELDEN RING",
+        "id": 1245620,
+        "price": {
+            "currency": "\u20b9",
+            "initial": "3,599",
+            "final": "2,339",
+            "discount": -35
+        },
+        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_231x87.jpg?t=1748630546",
+        "platforms": {
+            "windows": true,
+            "mac": false,
+            "linux": false
+        }
+    },
+    {
+        "name": "ELDEN RING NIGHTREIGN",
+        "id": 2622380,
+        "price": {
+            "currency": "\u20b9",
+            "initial": "2,499",
+            "final": "1,874",
+            "discount": -25
+        },
+        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/8ebc4260af27bc55ba8b88982fd7eb7f970d43c9/capsule_231x87.jpg?t=1764808750",
+        "platforms": {
+            "windows": true,
+            "mac": false,
+            "linux": false
+        }
+    },
+    {
+        "name": "ELDEN RING Shadow of the Erdtree",
+        "id": 2778580,
+        "price": {
+            "currency": "\u20b9",
+            "initial": "2,399",
+            "final": "2,399",
+            "discount": 0
+        },
+        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2778580/capsule_231x87.jpg?t=1763403045",
+        "platforms": {
+            "windows": true,
+            "mac": false,
+            "linux": false
+        }
+    },
+    {
+        "name": "ELDEN RING NIGHTREIGN The Forsaken Hollows",
+        "id": 3531720,
+        "price": {
+            "currency": "\u20b9",
+            "initial": "700",
+            "final": "700",
+            "discount": 0
+        },
+        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3531720/a6ab221829dc59c7014353dfde0004e2dfd48575/capsule_231x87.jpg?t=1765506462",
+        "platforms": {
+            "windows": true,
+            "mac": false,
+            "linux": false
+        }
+    },
+    {
+        "name": "ELDEN RING Shadow of the Erdtree Premium Bundle",
+        "id": 2778590,
         "price": {
             "currency": "\u20b9",
             "initial": "2,999",
-            "final": "299",
-            "discount": -90
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/capsule_231x87.jpg?t=1751986887",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch_Dogs\u2122",
-        "id": 243470,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "1,399",
-            "final": "349",
-            "discount": -75
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/capsule_231x87.jpg?t=1739177057",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch Dogs\u00ae: Legion",
-        "id": 2239550,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "2,999",
-            "final": "299",
-            "discount": -90
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2239550/capsule_231x87.jpg?t=1747655055",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch_Dogs\u00ae 2 - Human Conditions",
-        "id": 525030,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "749",
-            "final": "74",
-            "discount": -90
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/525030/capsule_231x87.jpg?t=1490361802",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch_Dogs\u00ae 2 - No Compromise",
-        "id": 525031,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "499",
-            "final": "49",
-            "discount": -90
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/525031/capsule_231x87.jpg?t=1495123536",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch Dogs Legion : Bloodline",
-        "id": 2239577,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "749",
-            "final": "112",
-            "discount": -85
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2239577/capsule_231x87.jpg?t=1674755825",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch_Dogs\u00ae 2 - Mega Pack",
-        "id": 597076,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "999",
-            "final": "999",
+            "final": "2,999",
             "discount": 0
         },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/597076/capsule_231x87.jpg?t=1493135881",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch_Dogs\u00ae 2 - Supreme Pack",
-        "id": 558391,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "749",
-            "final": "749",
-            "discount": 0
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/558391/capsule_231x87.jpg?t=1482522321",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch_Dogs\u00ae 2 - Guru Pack",
-        "id": 525016,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "349",
-            "final": "349",
-            "discount": 0
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/525016/capsule_231x87.jpg?t=1482522226",
-        "platforms": {
-            "windows": true,
-            "mac": false,
-            "linux": false
-        }
-    },
-    {
-        "name": "Watch_Dogs\u00ae 2 - Ubisoft Pack",
-        "id": 525033,
-        "price": {
-            "currency": "\u20b9",
-            "initial": "249",
-            "final": "249",
-            "discount": 0
-        },
-        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/525033/capsule_231x87.jpg?t=1508345165",
+        "tiny_img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2778590/capsule_231x87.jpg?t=1720714093",
         "platforms": {
             "windows": true,
             "mac": false,
