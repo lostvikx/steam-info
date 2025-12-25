@@ -52,7 +52,7 @@ a:hover {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto; /* Centers the container on the page */
     padding: 0 1rem;
 }
@@ -117,4 +117,110 @@ a:hover {
 .result-item p span:last-child {
     color: var(--accent-warning);
     font-weight: 600;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table, th, td {
+  border-bottom: 1px solid var(--muted-text-color);
+}
+
+td {
+  padding: 0.5em 0.5em;
+}
+
+td:last-of-type {
+  text-align: right;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.controls button {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    font-weight: 600;
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
+
+.side {
+    width: 33.33%;
+    flex: 0 0 33.33%;   /* do not grow or shrink */
+    overflow: hidden;  /* clip anything inside */
+    font-size: 0.8rem;
+}
+
+.side img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.side p {
+    padding: 0.5em;
+    margin-bottom: 0;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tags div {
+    background-color: var(--surface-hover-color);
+    padding: 0em 0.25em;
+    font-size: 0.8rem;
+}
+
+.section {
+    margin-bottom: 1.5rem;
+}
+
+.pc-req {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+}
+
+ul {
+    margin-left: 1rem;
+}
+
+ul li {
+    margin-top: 0.1rem;
 }

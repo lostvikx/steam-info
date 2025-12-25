@@ -1,10 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Game Details: {{ appid }}</title>
+    <meta charset="UTF-8">
+    <title>Game Details: {{ game.name }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Game: {{ appid }}</h1>
+    <div class="container">
+    <h1>{{ game.name }}</h1>
+
+    <section>
+        {% if game.screenshots %}
+            <div class="slider">
+                {% for shot in game.screenshots %}
+                    <img src="{{ shot.path_full if shot.path_thumbnail else shot }}">
+                {% endfor %}
+
+                <div class="controls">
+                    <button onclick="prev()"><</button>
+                    <button onclick="next()">></button>
+                </div>
+            </div>
+        {% endif %}
+        <div class="side">
+            {% if game.header_image %}
+                <img src="{{ game.header_image }}" alt="{{ game.name }} header image.">
+            {% endif %}
+            <p>{{ game.short_description }}</p>
+
+            <!-- Metadata -->
+            <table>
+                <tbody>
+                    <!--<tr>
+                        <td>App ID</td>
+                        <td>{{ game.steam_appid }}</td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td>{{ game.product_type | capitalize }}</td>
+                    </tr>-->
+                    <tr>
+                        <td>Developer</td>
+                        <td>
+                            {% for dev in game.developers %}
+                                <span>{{ dev }} </span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Publisher</td>
+                        <td>
+                            {% for pub in game.publishers %}
+                                <span>{{ pub }} </span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Release Date</td>
+                        <td>{{ game.release_date.date if game.release_date }}</td>
+                    </tr>
+                    <tr>
+                        <td>Platform</td>
+                        <td>
+                            {% for platform, supported in game.platforms.items() %}
+                                {% if supported %}
+                                    <span>{{ platform | capitalize }}</span>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% if game.website %}
+                        <tr>
+                            <td>Website</td>
+                            <td>
+                                <a href="{{ game.website }}" target="_blank">Support</a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Genres & Platforms -->
+    <div class="section">
+        <h4>Genres</h4>
+        <div class="tags">
+            {% for genre in game.genres %}
+                <div>{{ genre }}</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- PC Requirements -->
+    {% if game.pc_requirements %}
+    <div class="section">
+        <h4>PC Requirements</h4>
+        <div class="pc-req">
+            <div>
+                {{ game.pc_requirements.minimum | safe }}
+            </div>
+            <div>
+                {{ game.pc_requirements.recommended | safe }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Background -->
+    <!--{% if game.background_raw %}
+        <div class="section">
+            <h2>Background</h2>
+            <img src="{{ game.background_raw }}">
+        </div>
+    {% endif %}-->
+
+    <!-- Reviews & Scores -->
+    <div class="section">
+        <h2>Reviews</h2>
+        <p><strong>Summary:</strong> {{ game.review_summary.description }}</p>
+        <p><strong>Score:</strong> {{ game.score }}</p>
+
+        {% if game.metacritic %}
+            <p><strong>Metacritic:</strong> {{ game.metacritic.score }}</p>
+        {% endif %}
+    </div>
+    <script>
+        const images = document.querySelectorAll(".slider img");
+        images[0].classList.add("active");
+
+        let current = 0;
+
+        function show(index) {
+            images[current].classList.remove("active");
+            current = (index + images.length) % images.length;
+            images[current].classList.add("active");
+        }
+
+        function next() {
+            show(current + 1);
+        }
+
+        function prev() {
+            show(current - 1);
+        }
+    </script>
+    </div>
 </body>
 </html>

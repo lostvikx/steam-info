@@ -6,17 +6,15 @@ session.headers.update({
 })
 
 def search_results(search_query:str, lang:str="english", currency:str="IN") -> list[dict]:
-    url = "https://store.steampowered.com/api/storesearch/"
+    url = "https://store.steampowered.com/api/storesearch"
     params = {
         "term": search_query,
         "l": lang,
         "cc": currency,
     }
-
     search_results = list()
-
     try:
-        res = requests.get(url, params=params)
+        res = session.get(url, params=params)
         res.raise_for_status()
 
         data = res.json()
@@ -28,6 +26,10 @@ def search_results(search_query:str, lang:str="english", currency:str="IN") -> l
                 tiny_img=item.get("tiny_image"),
                 platforms=item.get("platforms"),
             )
+
+            if game.get("price") is None:
+                search_results.append(game)
+                continue
 
             init_price = game["price"]["initial"] // 100
             fin_price = game["price"]["final"] // 100
@@ -41,7 +43,7 @@ def search_results(search_query:str, lang:str="english", currency:str="IN") -> l
 
             search_results.append(game)
     except Exception as err:
-        print(f"Error: {err}")
+        print(f"Error in search: {err}")
 
     return search_results
 
@@ -52,40 +54,41 @@ def game_info(appid: str) -> dict:
         "appids": appid,
     }
     info = dict()
-
     try:
-        res = requests.get(url, params=params)
+        res = session.get(url, params=params)
         res.raise_for_status()
         data = res.json()
 
-        info["product_type"] = data[appid]["data"]["type"]
-        info["name"] = data[appid]["data"]["name"]
-        info["steam_appid"] = data[appid]["data"]["steam_appid"]
-        info["short_description"] = data[appid]["data"]["short_description"]
-        info["header_image"] = data[appid]["data"]["header_image"]
-        info["website"] = data[appid]["data"]["website"]
+        d = data[appid].get("data")
 
-        info["pc_requirements"] = data[appid]["data"]["pc_requirements"]
-        info["developers"] = data[appid]["data"]["developers"]
-        info["publishers"] = data[appid]["data"]["publishers"]
+        info["product_type"] = d["type"]
+        info["name"] = d["name"]
+        info["steam_appid"] = d["steam_appid"]
+        info["short_description"] = d["short_description"]
+        info["header_image"] = d["header_image"]
+        info["website"] = d["website"]
+
+        info["pc_requirements"] = d["pc_requirements"]
+        info["developers"] = d["developers"]
+        info["publishers"] = d["publishers"]
 
         info["price"] = {
-            "currency": data[appid]["data"]["price_overview"]["currency"],
-            "initial": data[appid]["data"]["price_overview"]["initial"],
-            "final": data[appid]["data"]["price_overview"]["final"],
+            "currency": d["price_overview"]["currency"],
+            "initial": d["price_overview"]["initial"],
+            "final": d["price_overview"]["final"],
         }
 
-        info["platforms"] = data[appid]["data"]["platforms"]
-        info["metacritic"] = data[appid]["data"]["metacritic"]
-        info["genres"] = [g["description"] for g in data[appid]["data"]["genres"]]
+        info["platforms"] = d["platforms"]
+        info["metacritic"] = d["metacritic"]
+        info["genres"] = [g["description"] for g in d["genres"]]
 
-        info["screenshots"] = data[appid]["data"]["screenshots"]
-        info["movies"] = data[appid]["data"]["movies"]
+        info["screenshots"] = d["screenshots"]
+        info["movies"] = d["movies"]
 
-        info["release_date"] = data[appid]["data"]["release_date"]
-        info["background_raw"] = data[appid]["data"]["background_raw"]
+        info["release_date"] = d["release_date"]
+        info["background_raw"] = d["background_raw"]
     except Exception as err:
-        print(f"Error: {err}")
+        print(f"Error in steam game info: {err}")
 
     return info
 
@@ -93,7 +96,7 @@ def proton_report(appid: str) -> dict:
     url = f"https://www.protondb.com/api/v1/reports/summaries/{appid}.json"
     report = dict()
     try:
-        res = requests.get(url)
+        res = session.get(url)
         res.raise_for_status()
         data = res.json()
 
@@ -101,7 +104,7 @@ def proton_report(appid: str) -> dict:
         report["tier"] = data["tier"]
         report["total"] = data["total"]
     except Exception as err:
-        print(f"Error: {err}")
+        print(f"Error proton report: {err}")
 
     return report
 
@@ -112,7 +115,6 @@ def steam_reviews(appid: str, filter:str="toprated", num_per_page:int=20, lang:s
         "language": lang,
     }
     reviews = dict()
-
     try:
         res = session.get(url, params=params)
         res.raise_for_status()
@@ -126,6 +128,6 @@ def steam_reviews(appid: str, filter:str="toprated", num_per_page:int=20, lang:s
         }
         reviews["reviews"] = data["reviews"]
     except Exception as err:
-        print(f"Error: {err}")
+        print(f"Error steam reviews: {err}")
 
     return reviews

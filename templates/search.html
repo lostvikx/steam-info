@@ -16,11 +16,13 @@
                     <img src="{{ game.tiny_img }}" alt="{{ game.name }}">
                     <div>
                         <h3>{{ game.name }}</h3>
-                        <p>
-                            <span>{{ game.price.discount }}&percnt;</span>
-                            <span><s>{{ game.price.currency }}{{ game.price.initial }}</s></span>
-                            <span>{{ game.price.currency }}{{ game.price.final }}</span>
-                        </p>
+                        {% if game.price %}
+                            <p>
+                                <span>{{ game.price.discount }}&percnt;</span>
+                                <span><s>{{ game.price.currency }}{{ game.price.initial }}</s></span>
+                                <span>{{ game.price.currency }}{{ game.price.final }}</span>
+                            </p>
+                        {% endif %}
                     </div>
                 </a>
             {% endfor %}

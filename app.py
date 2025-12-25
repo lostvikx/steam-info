@@ -36,12 +36,10 @@ def game_page(appid):
     if os.path.isfile(data_path):
         with open(data_path, "r") as f:
             merged_game_info = json.load(f)
-            return render_template("game.html", appid=appid, merged_game_info=merged_game_info)
+            return render_template("game.html", game=merged_game_info)
 
     game_info = fetch.game_info(appid)
-    sleep(2)
     proton_report = fetch.proton_report(appid)
-    sleep(2)
     reviews = fetch.steam_reviews(appid, "positive")
 
     merged_game_info = {**game_info, **proton_report, **reviews}
@@ -49,7 +47,7 @@ def game_page(appid):
     with open(data_path, "w") as f:
         json.dump(merged_game_info, f, indent=4)
 
-    return render_template("game.html", appid=appid, merged_game_info=merged_game_info)
+    return render_template("game.html", game=merged_game_info)
 
 
 if __name__ == "__main__":
