@@ -1,4 +1,5 @@
 import requests
+from numerize import numerize
 
 session = requests.Session()
 session.headers.update({
@@ -47,7 +48,7 @@ def search_results(search_query:str, lang:str="english", currency:str="IN") -> l
 
     return search_results
 
-def game_info(appid: str) -> dict:
+def game_info(appid:str) -> dict:
     # Backup URL: "https://www.protondb.com/proxy/steam/api/appdetails"
     url = "https://store.steampowered.com/api/appdetails"
     params = {
@@ -69,8 +70,8 @@ def game_info(appid: str) -> dict:
         info["website"] = d["website"]
 
         info["pc_requirements"] = d["pc_requirements"]
-        info["developers"] = d["developers"]
-        info["publishers"] = d["publishers"]
+        info["developers"] = d["developers"][0]
+        info["publishers"] = d["publishers"][0]
 
         info["price"] = {
             "currency": d["price_overview"]["currency"],
@@ -79,7 +80,7 @@ def game_info(appid: str) -> dict:
         }
 
         info["platforms"] = d["platforms"]
-        info["metacritic"] = d["metacritic"]
+        info["metacritic"] = d.get("metacritic")
         info["genres"] = [g["description"] for g in d["genres"]]
 
         info["screenshots"] = d["screenshots"]
@@ -92,7 +93,7 @@ def game_info(appid: str) -> dict:
 
     return info
 
-def proton_report(appid: str) -> dict:
+def proton_report(appid:str) -> dict:
     url = f"https://www.protondb.com/api/v1/reports/summaries/{appid}.json"
     report = dict()
     try:
@@ -108,26 +109,40 @@ def proton_report(appid: str) -> dict:
 
     return report
 
-def steam_reviews(appid: str, filter:str="toprated", num_per_page:int=20, lang:str="english") -> dict:
+def steam_reviews(appid:str, lang:str="english") -> dict:
     url = f"https://store.steampowered.com/appreviews/{appid}"
     params = {
         "json": 1,
         "language": lang,
     }
-    reviews = dict()
+    user_reviews = dict()
     try:
         res = session.get(url, params=params)
         res.raise_for_status()
         data = res.json()
 
-        reviews["review_summary"] = {
+        total_positive = int(data["query_summary"]["total_positive"])
+        total_reviews = int(data["query_summary"]["total_reviews"])
+        positive_percentage = round((total_positive / total_reviews) * 100, 2)
+
+        user_reviews["review_summary"] = {
             "description": data["query_summary"]["review_score_desc"],
-            "total_positive": data["query_summary"]["total_positive"],
-            "total_negative": data["query_summary"]["total_negative"],
-            "total_reviews": data["query_summary"]["total_reviews"]
+            "total_reviews": numerize.numerize(total_reviews),
+            "total_positive": numerize.numerize(total_positive),
+            "positive_percentage": positive_percentage,
         }
-        reviews["reviews"] = data["reviews"]
+        reviews = []
+        for rev in data["reviews"]:
+            if len(rev["review"]) <= 2000:
+                r = {
+                    "review": rev["review"],
+                    "timestamp_created": rev["timestamp_created"],
+                    "voted_up": rev["voted_up"],
+                    "votes_up": rev["votes_up"],
+                }
+                reviews.append(r)
+        user_reviews["reviews"] = [{**rev, "id": i} for i, rev in enumerate(reviews[:10])]
     except Exception as err:
         print(f"Error steam reviews: {err}")
 
-    return reviews
+    return user_reviews
