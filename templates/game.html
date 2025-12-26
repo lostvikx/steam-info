@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Game Details: {{ game.name }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
@@ -26,12 +27,26 @@
                     </div>
 
                     <!-- Genres -->
-                    <div>
-                        <h3>Genres</h4>
-                        <div class="tags">
-                            {% for genre in game.genres %}
-                                <div>{{ genre }}</div>
-                            {% endfor %}
+                    <div class="add-info">
+                        <div>
+                            <h3>Genres</h4>
+                            <div class="tags">
+                                {% for genre in game.genres %}
+                                    <div>{{ genre }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Useful Links</h3>
+                            <div class="links">
+                                {% if game.metacritic %}
+                                    <a href="{{ game.metacritic.url }}" target="_blank">Metacritic</a>
+                                {% endif %}
+                                {% if game.website %}
+                                        <a href="{{ game.website }}" target="_blank">Website</a>
+                                {% endif %}
+                                <a href="{{ game.background_raw }}" target="_blank">Background</a>
+                            </div>
                         </div>
                     </div>
 
@@ -64,7 +79,7 @@
                                     {% endif %}
                                     <div class="review-text">{{ review.review | safe }}</div>
                                     <div class="review-footer">
-                                        <div>Likes {{ review.votes_up }}</div>
+                                        <div><i class="fa-solid fa-thumbs-up"></i> {{ review.votes_up }}</div>
                                         <div class="read-more" id="more-btn-{{ review.id }}" onclick="toggleRead({{ review.id }})">Read More</div>
                                     </div>
                                 </div>
@@ -77,25 +92,38 @@
                 {% if game.header_image %}
                     <img src="{{ game.header_image }}" alt="{{ game.name }} header image.">
                 {% endif %}
-                <div class="ratings">
-                    <div class="scores">
-                        {% if game.metacritic %}
-                            <div>
-                                <div class="rate">{{ game.metacritic.score }}</div>
-                                <div>Metacritic</div>
-                            </div>
-                        {% endif %}
+                <div class="scores">
+                    {% if game.metacritic %}
                         <div>
-                            <div class="rate">{{ game.review_summary.positive_percentage }}&percnt;</div>
-                            <div>Positive Reviews</div>
+                            <div class="rate">{{ game.metacritic.score }}</div>
+                            <div>Metacritic</div>
                         </div>
-                        <div>
-                            <div class="rate"">{{ game.tier | capitalize }}</div>
-                            <div>ProtonDB</div>
-                        </div>
+                    {% endif %}
+                    <div>
+                        <div class="rate">{{ game.review_summary.positive_percentage }}&percnt;</div>
+                        <div>Positive Reviews</div>
+                    </div>
+                    <div>
+                        <div class="rate"">{{ game.tier | capitalize }}</div>
+                        <div>ProtonDB</div>
                     </div>
                 </div>
                 <p>{{ game.short_description }}</p>
+
+                {% if game.price %}
+                    <div class="price">
+                        <div>{{ game.price.discount }}&percnt;</div>
+                        <div>
+                            <s>{{ game.price.currency }}{{ game.price.initial }}</s>
+                        </div>
+                        <div>{{ game.price.currency }}{{ game.price.final }}</div>
+                    </div>
+                {% endif %}
+
+                <div class="cta">
+                    <a href="https://store.steampowered.com/app/{{ game.steam_appid }}" target="_blank" class="btn buy"><i class="fa-solid fa-cart-shopping"></i> Buy</a>
+                    <button class="btn save"><i class="fa-solid fa-bookmark"></i> Save</button>
+                </div>
 
                 <!-- Metadata -->
                 <table>
@@ -113,19 +141,17 @@
                             <td>
                                 {% for platform, supported in game.platforms.items() %}
                                     {% if supported %}
-                                        <span>{{ platform | capitalize }}</span>
+                                        {% if platform == "windows" %}
+                                            <i class="fa-brands fa-windows"></i>
+                                        {% elif platform == "mac" %}
+                                            <i class="fa-brands fa-apple"></i>
+                                        {% else %}
+                                            <i class="fa-brands fa-linux"></i>
+                                        {% endif %}
                                     {% endif %}
                                 {% endfor %}
                             </td>
                         </tr>
-                        {% if game.website %}
-                            <tr>
-                                <td>Website</td>
-                                <td>
-                                    <a href="{{ game.website }}" target="_blank">Support</a>
-                                </td>
-                            </tr>
-                        {% endif %}
                     </tbody>
                 </table>
             </div>

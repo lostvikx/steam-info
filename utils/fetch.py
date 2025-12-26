@@ -48,11 +48,12 @@ def search_results(search_query:str, lang:str="english", currency:str="IN") -> l
 
     return search_results
 
-def game_info(appid:str) -> dict:
+def game_info(appid:str, currency:str="IN") -> dict:
     # Backup URL: "https://www.protondb.com/proxy/steam/api/appdetails"
     url = "https://store.steampowered.com/api/appdetails"
     params = {
         "appids": appid,
+        "cc": currency
     }
     info = dict()
     try:
@@ -73,11 +74,22 @@ def game_info(appid:str) -> dict:
         info["developers"] = d["developers"][0]
         info["publishers"] = d["publishers"][0]
 
-        info["price"] = {
-            "currency": d["price_overview"]["currency"],
-            "initial": d["price_overview"]["initial"],
-            "final": d["price_overview"]["final"],
-        }
+        info["price"] = dict()
+        # print(d["price_overview"])
+
+        init_price = d["price_overview"]["initial"] // 100
+        fin_price = d["price_overview"]["final"] // 100
+        discount = int(((fin_price - init_price) / init_price) * 100)
+
+        init_price = f"{init_price:,}"
+        fin_price = f"{fin_price:,}"
+
+        if d["price_overview"]["currency"] == "INR":
+            info["price"]["currency"] = "₹"
+
+        info["price"]["initial"] = init_price
+        info["price"]["final"] = fin_price
+        info["price"]["discount"] = discount
 
         info["platforms"] = d["platforms"]
         info["metacritic"] = d.get("metacritic")

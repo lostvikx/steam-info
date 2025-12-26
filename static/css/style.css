@@ -6,6 +6,7 @@
 
 :root {
     --primary-color: #cba6f7;
+    --accent-color: #89b4fa;
     --text-color: #cdd6f4;
     --background-color: #1e1e2e;
     --font-family-base: monospace, 'Courier New', Courier;
@@ -62,7 +63,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*gap: 0.5rem;*/
+    gap: 0.5rem;
 }
 
 .result-item {
@@ -130,10 +131,6 @@ section {
     margin-bottom: 1rem;
 }
 
-/*.slider {
-    position: relative;
-}*/
-
 .main {
     display: flex;
     flex-direction: column;
@@ -170,8 +167,8 @@ section {
 
 .side {
     width: 33.33%;
-    flex: 0 0 33.33%;   /* do not grow or shrink */
-    overflow: hidden;  /* clip anything inside */
+    flex: 0 0 33.33%;
+    overflow: hidden;
     font-size: 0.8rem;
 }
 
@@ -181,20 +178,12 @@ section {
     display: block;
 }
 
-.ratings {
-    margin-top: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
 .scores {
+    margin-top: 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     gap: 1em;
 }
@@ -231,21 +220,38 @@ td:last-of-type {
   text-align: right;
 }
 
-.tags {
+.add-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.tags, .links {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
 .tags div {
+    color: var(--text-color);
     background-color: var(--surface-hover-color);
     padding: 0em 0.25em;
     font-size: 0.8rem;
 }
 
+.tags a:hover {
+    text-decoration: none;
+}
+
+.links a {
+    padding: 0em 0.25em;
+    font-size: 0.8rem;
+    /*border: 1px solid var(--muted-text-color);*/
+}
+
 .pc-req {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     font-size: 0.8rem;
 }
@@ -301,4 +307,73 @@ ul li {
     cursor: pointer;
     color: var(--primary-color);
     display: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.price {
+    display: flex;
+    color: var(--muted-text-color);
+    gap: 1rem;
+    margin: 0.8rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.price div:first-child {
+    padding: 0 0.5rem;
+    color: var(--background-color);
+    background-color: var(--accent-success);
+    font-weight: 600;
+}
+
+.price s {
+    color: var(--faded-text-color);
+}
+
+.price div:last-child {
+    color: var(--accent-warning);
+    font-weight: 600;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.btn {
+  background: var(--surface-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.25s ease;
+  font-weight: 600;
+}
+
+.buy {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.btn:hover {
+  background-color: var(--surface-hover-color);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.btn.buy:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
