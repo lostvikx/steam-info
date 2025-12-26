@@ -80,7 +80,7 @@
                                     <div class="review-text">{{ review.review | safe }}</div>
                                     <div class="review-footer">
                                         <div><i class="fa-solid fa-thumbs-up"></i> {{ review.votes_up }}</div>
-                                        <div class="read-more" id="more-btn-{{ review.id }}" onclick="toggleRead({{ review.id }})">Read More</div>
+                                        <div class="read-more" id="more-btn-{{ review.id }}">Read More</div>
                                     </div>
                                 </div>
                             {% endfor %}
@@ -196,6 +196,7 @@
             if (reviews[i].textContent.length > 400) {
                 reviews[i].textContent = reviews[i].textContent.slice(0, 400) + "...";
                 readMoreBtns[i].style.display = "block";
+                readMoreBtns[i].addEventListener("click", () => toggleRead(i));
             }
         }
 
