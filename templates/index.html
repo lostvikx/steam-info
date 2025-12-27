@@ -5,11 +5,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Steam Game Info</h1>
+    <div class="container">
+        <h1>Steam Game Info</h1>
 
-    <form action="/search" method="get">
-        <input type="text" name="q" placeholder="Search for a game.">
-        <button type="submit">Search</button>
-    </form>
+        <form action="/search" method="get">
+            <input type="text" name="q" placeholder="Search for a game.">
+            <button type="submit">Search</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -5,32 +5,35 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Search Results</h1>
+    <div class="container">
+        <h1>Search Results</h1>
 
-    {% if search_query %}
-        <p>Results for: <strong>{{ search_query }}</strong></p>
+        {% if search_query %}
+            <p>Results for: <strong>{{ search_query }}</strong></p>
+            <div class="results">
+                {% for game in search_results %}
+                    <a href="/game/{{ game.id }}" class="result-item">
+                        <img src="{{ game.tiny_img }}" alt="{{ game.name }}">
+                        <div>
+                            <h3>{{ game.name }}</h3>
+                            {% if game.price %}
+                                <p>
+                                    <span>{{ game.price.discount }}&percnt;</span>
+                                    <span><s>{{ game.price.currency }}{{ game.price.initial }}</s></span>
+                                    <span>{{ game.price.currency }}{{ game.price.final }}</span>
+                                </p>
+                            {% endif %}
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
 
-        <div class="results">
-            {% for game in search_results %}
-                <a href="/game/{{ game.id }}" class="result-item">
-                    <img src="{{ game.tiny_img }}" alt="{{ game.name }}">
-                    <div>
-                        <h3>{{ game.name }}</h3>
-                        {% if game.price %}
-                            <p>
-                                <span>{{ game.price.discount }}&percnt;</span>
-                                <span><s>{{ game.price.currency }}{{ game.price.initial }}</s></span>
-                                <span>{{ game.price.currency }}{{ game.price.final }}</span>
-                            </p>
-                        {% endif %}
-                    </div>
-                </a>
-            {% endfor %}
+        {% else %}
+            <p>Error: No search query provided.</p>
+        {% endif %}
+        <div class="back-home">
+            <a href="/" class="btn">Go Back</a>
         </div>
-
-    {% else %}
-        <p>Error: No search query provided.</p>
-    {% endif %}
-    <a href="/">Back to Home</a>
+    </div>
 </body>
 </html>

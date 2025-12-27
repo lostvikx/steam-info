@@ -6,7 +6,9 @@
 
 :root {
     --primary-color: #cba6f7;
+    --primary-color-light: #f5c2e7;
     --accent-color: #89b4fa;
+    --accent-color-light: #74c7ec;
     --text-color: #cdd6f4;
     --background-color: #1e1e2e;
     --font-family-base: monospace, 'Courier New', Courier;
@@ -46,7 +48,7 @@ p {
 a {
     color: var(--primary-color);
     text-decoration: none;
-    transition: color 0.3s ease;
+    /*transition: color 0.3s ease;*/
 }
 
 a:hover {
@@ -183,7 +185,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     gap: 1em;
 }
@@ -358,7 +360,7 @@ ul li {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
-  transition: background 0.25s ease;
+  /*transition: background 0.25s ease;*/
   font-weight: 600;
 }
 
@@ -374,6 +376,26 @@ ul li {
 }
 
 .btn.buy:hover {
+    background-color: var(--accent-color-light);
+    color: var(--background-color);
+}
+
+.more-reviews-btn {
+    margin-top: 1rem;
+}
+
+.back-home {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.back-home a {
+    display: block;
     background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.back-home a:hover {
+    background-color: #f5c2e7;
     color: var(--background-color);
 }

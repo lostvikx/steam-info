@@ -45,7 +45,9 @@
                                 {% if game.website %}
                                         <a href="{{ game.website }}" target="_blank">Website</a>
                                 {% endif %}
-                                <a href="{{ game.background_raw }}" target="_blank">Background</a>
+                                {% if game.background_raw %}
+                                    <a href="{{ game.background_raw }}" target="_blank">Background</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -85,6 +87,9 @@
                                 </div>
                             {% endfor %}
                         </div>
+                        <button id="more-reviews" class="btn more-reviews-btn">
+                            More Reviews
+                        </button>
                     </div>
                 </div>
             {% endif %}
@@ -203,6 +208,20 @@
         function toggleRead(id) {
             reviews[id].textContent = reviewTexts[id];
             readMoreBtns[id].style.display = "none";
+        }
+
+        const revs = document.querySelectorAll(".review");
+        const moreReviewsBtn = document.querySelector("#more-reviews");
+        for (let i = 3; i < revs.length; i++) {
+            revs[i].style.display = "none";
+        }
+        moreReviewsBtn.addEventListener("click", () => toggleMoreReviews());
+
+        function toggleMoreReviews() {
+          moreReviewsBtn.style.display = "none";
+          for (let i = 3; i < revs.length; i++) {
+                revs[i].style.display = "block";
+            }
         }
     </script>
 </body>
