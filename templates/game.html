@@ -216,6 +216,11 @@
 
         const revs = document.querySelectorAll(".review");
         const moreReviewsBtn = document.querySelector("#more-reviews");
+
+        if (revs.length == 0) {
+            moreReviewsBtn.style.display = "none";
+        }
+
         for (let i = 3; i < revs.length; i++) {
             revs[i].style.display = "none";
         }
