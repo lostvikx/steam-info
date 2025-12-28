@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Steam Game Info</title>
+    <title>SteamInfo - Home of Steam Information</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Steam Game Info</h1>
+        <header class="flexbox">
+            <img src="{{ url_for('static', filename='favicon/android-chrome-512x512.png') }}" alt="SteamInfo Logo" class="logo">
+            <h1>SteamInfo</h1>
+        </header>
 
         <form action="/search" method="get">
-            <input type="text" name="q" placeholder="Search for a game.">
-            <button type="submit">Search</button>
+            <input type="text" name="q" placeholder="Search SteamInfo">
+            <button type="submit" class="btn buy">Search</button>
         </form>
     </div>
 </body>

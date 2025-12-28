@@ -31,11 +31,11 @@ def search():
 @app.route("/game/<string:appid>")
 def game_page(appid):
 
-    data_path = f"data/{appid}.json"
-    if os.path.isfile(data_path):
-        with open(data_path, "r") as f:
-            merged_game_info = json.load(f)
-            return render_template("game.html", game=merged_game_info)
+    # data_path = f"data/{appid}.json"
+    # if os.path.isfile(data_path):
+    #     with open(data_path, "r") as f:
+    #         merged_game_info = json.load(f)
+    #         return render_template("game.html", game=merged_game_info)
 
     game_info = fetch.game_info(appid)
     proton_report = fetch.proton_report(appid)
@@ -43,8 +43,8 @@ def game_page(appid):
 
     merged_game_info = {**game_info, **proton_report, **reviews}
 
-    with open(data_path, "w") as f:
-        json.dump(merged_game_info, f, indent=4)
+    # with open(data_path, "w") as f:
+    #     json.dump(merged_game_info, f, indent=4)
 
     return render_template("game.html", game=merged_game_info)
 
