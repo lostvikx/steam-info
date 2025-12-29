@@ -1,3 +1,4 @@
+import math
 import requests
 from numerize import numerize
 
@@ -197,7 +198,7 @@ def wishlist(steamid:str="76561199589453674") -> dict:
         print(f"Error in fetching wishlist: {err}")
     return wishlist
 
-def steam_sales(store_id:int=1, page:int=0, upper_price:int=15):
+def steam_deals(store_id:int=1, page:int=0, upper_price:int=15):
     # INFO: https://apidocs.cheapshark.com/
     url = "https://www.cheapshark.com/api/1.0/deals"
     params = {
@@ -205,13 +206,34 @@ def steam_sales(store_id:int=1, page:int=0, upper_price:int=15):
         "pageNumber": page,
         "upperPrice": upper_price
     }
-    deals = dict()
+    deals = {
+        "deals": []
+    }
     try:
         res = session.get(url, params=params)
         res.raise_for_status()
         data = res.json()
 
-        deals["deals"] = data
+        for deal in data:
+            app = dict()
+
+            # USD to INR: $1 == INR 50 (PPP Adjusted)
+            init_price = math.ceil(float(deal.get("normalPrice"))) * 50
+            sale_price = math.ceil(float(deal.get("salePrice"))) * 50
+            discount = int(((sale_price - init_price) / init_price) * 100)
+
+            app["title"] = deal.get("title")
+            app["init_price"] = init_price
+            app["sale_price"] = sale_price
+            app["currency"] = "₹"
+            app["discount"] = discount
+            app["steam_rating_text"] = deal.get("steamRatingText")
+            app["steam_appid"] = deal.get("steamAppID")
+            app["release_date"] = deal.get("releaseDate")
+            app["deal_rating"] = deal.get("dealRating")
+            app["thumb"] = deal.get("thumb")
+
+            deals["deals"].append(app)
     except Exception as err:
         print(f"Error in fetching deals: {err}")
     return deals

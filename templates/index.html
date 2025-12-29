@@ -23,7 +23,24 @@
         </div>
 
         <div>
-            <a href="https://steamdb.info/sales/?cc=in&max_price=1000&min_discount=50&min_rating=90&min_reviews=5000&sort=rating_desc" target="_blank">Steam Sale</a>
+            <a href="https://steamdb.info/sales/?cc=in&max_price=1000&min_discount=50&min_rating=90&min_reviews=5000&sort=rating_desc" target="_blank">SteamDB Sale</a>
+        </div>
+
+        <div class="results">
+            <h2>Best Deals on Steam</h2>
+            {% for deal in deals.deals %}
+                <a href="/game/{{ deal.steam_appid }}" class="deal result-item">
+                    <img src="{{ deal.thumb }}" alt="{{ deal.title }} thumbnail" loading="lazy">
+                    <div>
+                        <h3>{{ deal.title }}</h3>
+                        <p>
+                            <span>{{ deal.discount }}&percnt;</span>
+                            <span><s>{{ deal.currency }}{{ deal.init_price }}</s></span>
+                            <span>{{ deal.currency }}{{ deal.sale_price }}</span>
+                        </p>
+                    </div>
+                </a>
+            {% endfor %}
         </div>
     </div>
 </body>

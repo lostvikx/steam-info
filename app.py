@@ -7,7 +7,17 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     wishlist = dict()
+    deals = dict()
     wishlist_filepath = "data/wishlist.json"
+    deals_filepath = "data/deals.json"
+
+    is_wishlist_old = save.is_file_old(wishlist_filepath, days=7)
+    is_deals_old = save.is_file_old(deals_filepath, days=1)
+
+    if is_wishlist_old:
+        os.remove(wishlist_filepath)
+    if is_deals_old:
+        os.remove(deals_filepath)
 
     if not os.path.isfile(wishlist_filepath):
         wishlist = fetch.wishlist()
@@ -15,7 +25,13 @@ def index():
     else:
         wishlist = save.read_json(wishlist_filepath)
 
-    return render_template("index.html")
+    if not os.path.isfile(deals_filepath):
+        deals = fetch.steam_deals()
+        save.write_json(deals_filepath, deals)
+    else:
+        deals = save.read_json(deals_filepath)
+
+    return render_template("index.html", wishlist=wishlist, deals=deals)
 
 
 @app.route("/search")
@@ -31,9 +47,8 @@ def game_page(appid):
     game = dict()
     game_filepath = f"data/games/{appid}.json"
 
-    is_data_old = save.is_file_old(game_filepath, days=1)
-    if is_data_old:
-        print("Old information in file.")
+    is_gamedata_old = save.is_file_old(game_filepath, days=1)
+    if is_gamedata_old:
         os.remove(game_filepath)
 
     if not os.path.isfile(game_filepath):

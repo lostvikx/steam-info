@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a:focus {
+    outline: none;
+    border: 1px solid var(--accent-danger);
+}
+
 :root {
     --primary-color: #cba6f7;
     --primary-color-light: #f5c2e7;
@@ -90,6 +95,10 @@ input {
 
 input::placeholder {
     color: var(--muted-text-color);
+}
+
+input:focus {
+    border-color: var(--accent-color);
 }
 
 .results {
