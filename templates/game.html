@@ -14,21 +14,23 @@
     <div class="container">
         <h1>{{ game.name }}</h1>
 
+        {% if game.info_success %}
         <section>
-            {% if game.screenshots %}
                 <div class="main">
-                    <div class="slider">
-                        <div class="img-container">
-                            {% for shot in game.screenshots %}
-                                <img src="{{ shot.path_full if shot.path_thumbnail else shot }}">
-                            {% endfor %}
-                        </div>
+                    {% if game.screenshots %}
+                        <div class="slider">
+                            <div class="img-container">
+                                {% for shot in game.screenshots %}
+                                    <img src="{{ shot.path_full if shot.path_thumbnail else shot }}">
+                                {% endfor %}
+                            </div>
 
-                        <div class="controls">
-                            <button onclick="prev()">&lt;</button>
-                            <button onclick="next()">&gt;</button>
+                            <div class="controls">
+                                <button onclick="prev()">&lt;</button>
+                                <button onclick="next()">&gt;</button>
+                            </div>
                         </div>
-                    </div>
+                    {% endif %}
 
                     <!-- Genres -->
                     <div class="add-info">
@@ -78,14 +80,21 @@
                         <div class="review-section">
                             {% for review in game.reviews %}
                                 <div class="review">
-                                    {% if review.voted_up %}
-                                        <p class="positive">Recommended</p>
-                                    {% else %}
-                                        <p class="negative">Not Recommended</p>
-                                    {% endif %}
+                                    <div class="review-header">
+                                        {% if review.voted_up %}
+                                            <p class="positive">Recommended</p>
+                                        {% else %}
+                                            <p class="negative">Not Recommended</p>
+                                        {% endif %}
+                                        <div class="review-timestamp">
+                                            {{ review.timestamp_created }}
+                                        </div>
+                                    </div>
                                     <div class="review-text">{{ review.review | safe }}</div>
                                     <div class="review-footer">
-                                        <div><i class="fa-solid fa-thumbs-up"></i> {{ review.votes_up }}</div>
+                                        <div>
+                                            <i class="fa-solid fa-thumbs-up"></i> {{ review.votes_up }}
+                                        </div>
                                         <div class="read-more" id="more-btn-{{ review.id }}">Read More</div>
                                     </div>
                                 </div>
@@ -95,11 +104,14 @@
                             More Reviews
                         </button>
                     </div>
+                    <div>
+                        <h3>Price History</h3>
+                        <iframe src="https://steambase.io/embed/games/{{ game.steam_appid }}/prices" height="375" loading="lazy" style="border:0;width:100%;font-size:0.8rem;"></iframe>
+                    </div>
                 </div>
-            {% endif %}
             <div class="side">
                 {% if game.header_image %}
-                    <img src="{{ game.header_image }}" alt="{{ game.name }} header image.">
+                    <img src="{{ game.header_image }}" alt="{{ game.name }} header image." loading="lazy">
                 {% endif %}
                 <div class="scores">
                     {% if game.metacritic %}
@@ -165,6 +177,12 @@
                 </table>
             </div>
         </section>
+        {% else %}
+            <div>
+                <h1>Error</h1>
+                <p>Could not fetch the game information data from Steam.</p>
+            </div>
+        {% endif %}
 
         <!-- Background -->
         <!--{% if game.background_raw %}
@@ -231,6 +249,16 @@
           for (let i = 3; i < revs.length; i++) {
                 revs[i].style.display = "block";
             }
+        }
+
+        const reviewTimestamps = document.querySelectorAll(".review-timestamp");
+        const datetimes = Array.from(reviewTimestamps).map(timestamp => {
+            dt = new Date(parseInt(timestamp.textContent.trim()) * 1000);
+            return dt.toDateString();
+        });
+
+        for (let i = 0; i < datetimes.length; i++) {
+            reviewTimestamps[i].textContent = datetimes[i];
         }
     </script>
 </body>

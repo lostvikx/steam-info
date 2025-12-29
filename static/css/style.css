@@ -8,7 +8,7 @@
     --primary-color: #cba6f7;
     --primary-color-light: #f5c2e7;
     --accent-color: #89b4fa;
-    --accent-color-light: #74c7ec;
+    --accent-color-light: #89dceb;
     --text-color: #cdd6f4;
     --background-color: #1e1e2e;
     --font-family-base: monospace, 'Courier New', Courier;
@@ -261,6 +261,8 @@ td:last-of-type {
 
 .tags, .links {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
 }
@@ -298,9 +300,6 @@ ul li {
 }
 
 .review-section {
-    /*display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;*/
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -314,7 +313,7 @@ ul li {
 
 .review p:first-child {
     font-size: 1rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
 }
 
 .positive {
@@ -323,6 +322,19 @@ ul li {
 
 .negative {
     color: var(--accent-danger);
+}
+
+.review-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.review-timestamp {
+    font-size: 0.7rem;
+    color: var(--muted-text-color);
 }
 
 .review-text {

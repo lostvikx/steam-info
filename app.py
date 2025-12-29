@@ -1,10 +1,20 @@
-from utils import fetch
+import os
+from utils import fetch, save
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
+    wishlist = dict()
+    wishlist_filepath = "data/wishlist.json"
+
+    if not os.path.isfile(wishlist_filepath):
+        wishlist = fetch.wishlist()
+        save.write_json(wishlist_filepath, wishlist)
+    else:
+        wishlist = save.read_json(wishlist_filepath)
+
     return render_template("index.html")
 
 
@@ -18,13 +28,24 @@ def search():
 
 @app.route("/game/<string:appid>")
 def game_page(appid):
+    game = dict()
+    game_filepath = f"data/games/{appid}.json"
 
-    game_info = fetch.game_info(appid)
-    proton_report = fetch.proton_report(appid)
-    reviews = fetch.steam_reviews(appid)
-    merged_game_info = {**game_info, **proton_report, **reviews}
+    is_data_old = save.is_file_old(game_filepath, days=1)
+    if is_data_old:
+        print("Old information in file.")
+        os.remove(game_filepath)
 
-    return render_template("game.html", game=merged_game_info)
+    if not os.path.isfile(game_filepath):
+        game_info = fetch.game_info(appid)
+        proton_report = fetch.proton_report(appid)
+        reviews = fetch.steam_reviews(appid)
+        game = {**game_info, **proton_report, **reviews}
+        save.write_json(game_filepath, game)
+    else:
+        game = save.read_json(game_filepath)
+
+    return render_template("game.html", game=game)
 
 
 if __name__ == "__main__":

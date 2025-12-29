@@ -44,12 +44,13 @@ def search_results(search_query:str, lang:str="english", currency:str="IN") -> l
 
             search_results.append(game)
     except Exception as err:
-        print(f"Error in search: {err}")
+        print(f"Error in fetching steam search results: {err}")
 
     return search_results
 
 def game_info(appid:str, currency:str="IN") -> dict:
-    # Backup URL: "https://www.protondb.com/proxy/steam/api/appdetails"
+    # INFO: Rate Limit: Approximately 200 requests every 5 minutes per IP address.
+    # Backup: "https://www.protondb.com/proxy/steam/api/appdetails"
     url = "https://store.steampowered.com/api/appdetails"
     params = {
         "appids": appid,
@@ -60,6 +61,10 @@ def game_info(appid:str, currency:str="IN") -> dict:
         res = session.get(url, params=params)
         res.raise_for_status()
         data = res.json()
+
+        info["info_success"] = data[appid].get("success")
+        if not info["info_success"]:
+            return info
 
         d = data[appid].get("data")
 
@@ -113,7 +118,7 @@ def game_info(appid:str, currency:str="IN") -> dict:
         info["release_date"] = d.get("release_date")
         info["background_raw"] = d.get("background_raw")
     except Exception as err:
-        print(f"Error in steam game info: {err}")
+        print(f"Error in fetching steam info: {err}")
 
     return info
 
@@ -129,7 +134,7 @@ def proton_report(appid:str) -> dict:
         report["tier"] = data.get("tier")
         report["total"] = data.get("total")
     except Exception as err:
-        print(f"Error proton report: {err}")
+        print(f"Error in fetching proton report: {err}")
 
     return report
 
@@ -172,6 +177,41 @@ def steam_reviews(appid:str, lang:str="english") -> dict:
                 reviews.append(r)
         user_reviews["reviews"] = [{**rev, "id": i} for i, rev in enumerate(reviews[:10])]
     except Exception as err:
-        print(f"Error steam reviews: {err}")
+        print(f"Error in fetching steam reviews: {err}")
 
     return user_reviews
+
+def wishlist(steamid:str="76561199589453674") -> dict:
+    url = "https://api.steampowered.com/IWishlistService/GetWishlist/v1"
+    params = {
+        "steamid": steamid
+    }
+    wishlist = dict()
+    try:
+        res = session.get(url, params=params)
+        res.raise_for_status()
+        data = res.json()
+
+        wishlist = data.get("response")
+    except Exception as err:
+        print(f"Error in fetching wishlist: {err}")
+    return wishlist
+
+def steam_sales(store_id:int=1, page:int=0, upper_price:int=15):
+    # INFO: https://apidocs.cheapshark.com/
+    url = "https://www.cheapshark.com/api/1.0/deals"
+    params = {
+        "storeID": store_id,
+        "pageNumber": page,
+        "upperPrice": upper_price
+    }
+    deals = dict()
+    try:
+        res = session.get(url, params=params)
+        res.raise_for_status()
+        data = res.json()
+
+        deals["deals"] = data
+    except Exception as err:
+        print(f"Error in fetching deals: {err}")
+    return deals
