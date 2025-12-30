@@ -7,17 +7,11 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     wishlist = dict()
-    deals = dict()
     wishlist_filepath = "data/wishlist.json"
-    deals_filepath = "data/deals.json"
-
     is_wishlist_old = save.is_file_old(wishlist_filepath, days=7)
-    is_deals_old = save.is_file_old(deals_filepath, days=1)
 
     if is_wishlist_old:
         os.remove(wishlist_filepath)
-    if is_deals_old:
-        os.remove(deals_filepath)
 
     if not os.path.isfile(wishlist_filepath):
         wishlist = fetch.wishlist()
@@ -25,13 +19,7 @@ def index():
     else:
         wishlist = save.read_json(wishlist_filepath)
 
-    if not os.path.isfile(deals_filepath):
-        deals = fetch.steam_deals()
-        save.write_json(deals_filepath, deals)
-    else:
-        deals = save.read_json(deals_filepath)
-
-    return render_template("index.html", wishlist=wishlist, deals=deals)
+    return render_template("index.html", wishlist=wishlist)
 
 
 @app.route("/search")
@@ -62,6 +50,23 @@ def game_page(appid):
 
     return render_template("game.html", game=game)
 
+
+@app.route("/deals/<int:page_num>")
+def deal_page(page_num):
+    deals = dict()
+    deals_filepath = f"data/deals/{page_num}.json"
+    is_deals_old = save.is_file_old(deals_filepath, days=1)
+
+    if is_deals_old:
+        os.remove(deals_filepath)
+
+    if not os.path.isfile(deals_filepath):
+        deals = fetch.steam_deals(page=page_num-1)
+        save.write_json(deals_filepath, deals)
+    else:
+        deals = save.read_json(deals_filepath)
+
+    return render_template("deals.html", deals=deals, page_num=page_num)
 
 if __name__ == "__main__":
     app.run(port=8080, debug=True, host="0.0.0.0")

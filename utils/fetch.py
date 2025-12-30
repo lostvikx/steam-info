@@ -1,4 +1,3 @@
-import math
 import requests
 from numerize import numerize
 
@@ -198,16 +197,21 @@ def wishlist(steamid:str="76561199589453674") -> dict:
         print(f"Error in fetching wishlist: {err}")
     return wishlist
 
-def steam_deals(store_id:int=1, page:int=0, upper_price:int=15):
+def steam_deals(store_id:int=1, page:int=0, sort_by:str="DealRating", upper_price:int=15, steam_rating:int=75, min_review_count:int=5000, page_size:int=50):
     # INFO: https://apidocs.cheapshark.com/
     url = "https://www.cheapshark.com/api/1.0/deals"
     params = {
         "storeID": store_id,
+        "upperPrice": upper_price,
+        "sortBy": sort_by,
+        "steamRating": steam_rating,
+        "minimumReviewCount": min_review_count,
+        "pageSize": page_size,
         "pageNumber": page,
-        "upperPrice": upper_price
     }
     deals = {
-        "deals": []
+        "page_number": page,
+        "deals": [],
     }
     try:
         res = session.get(url, params=params)
@@ -217,9 +221,9 @@ def steam_deals(store_id:int=1, page:int=0, upper_price:int=15):
         for deal in data:
             app = dict()
 
-            # USD to INR: $1 == INR 50 (PPP Adjusted)
-            init_price = math.ceil(float(deal.get("normalPrice"))) * 50
-            sale_price = math.ceil(float(deal.get("salePrice"))) * 50
+            # USD to INR: $1 == ₹50 (PPP Adjusted)
+            init_price = round(float(deal.get("normalPrice"))) * 49
+            sale_price = round(float(deal.get("salePrice"))) * 49
             discount = int(((sale_price - init_price) / init_price) * 100)
 
             app["title"] = deal.get("title")
@@ -227,7 +231,9 @@ def steam_deals(store_id:int=1, page:int=0, upper_price:int=15):
             app["sale_price"] = sale_price
             app["currency"] = "₹"
             app["discount"] = discount
-            app["steam_rating_text"] = deal.get("steamRatingText")
+            app["metacritic"] = deal.get("metacriticScore", 0)
+            app["steam_rating_text"] = deal.get("steamRatingText", "-")
+            app["steam_rating_percent"] = deal.get("steamRatingPercent", 0)
             app["steam_appid"] = deal.get("steamAppID")
             app["release_date"] = deal.get("releaseDate")
             app["deal_rating"] = deal.get("dealRating")

@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-a:focus {
-    outline: none;
-    border: 1px solid var(--accent-danger);
-}
-
 :root {
     --primary-color: #cba6f7;
     --primary-color-light: #f5c2e7;
@@ -35,7 +30,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
-    padding: 2.5rem;
+    padding: 1rem 2.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,8 +38,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
 
 p {
     margin-bottom: 1em;
@@ -53,7 +53,6 @@ p {
 a {
     color: var(--primary-color);
     text-decoration: none;
-    /*transition: color 0.3s ease;*/
 }
 
 a:hover {
@@ -125,8 +124,6 @@ input:focus {
 }
 
 .result-item img {
-    /*width: 231px;
-    height: 87px;*/
     object-fit: cover;
 }
 
@@ -240,8 +237,6 @@ section {
 }
 
 .side p {
-    /*padding: 0.5em;*/
-    /*margin-bottom: 0;*/
     margin-top: 1em;
 }
 
@@ -251,14 +246,89 @@ table {
 }
 
 table, th, td {
-  border-bottom: 1px solid var(--muted-text-color);
+    border-bottom: 1px solid var(--surface-color);
 }
 
-td {
+thead {
+    font-size: 1rem;
+}
+
+.deals tbody {
+    font-size: 0.9rem;
+}
+
+.deal-img a {
+    display: block;
+}
+
+.deal-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deals thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--surface-color);
+}
+
+.deals img {
+    display: block;
+    width: 115px;
+}
+
+.deals img:active {
+    display: block;
+}
+
+.deals td, .deals th {
+    padding: 0.25em;
+}
+
+.deal-title {
+    color: var(--primary-color-light);
+}
+
+.steamdb {
+    margin-top: 2rem;
+}
+
+.deals-section {
+    margin-top: 2rem;
+}
+
+.num-col, .text-col {
+    text-align: center;
+}
+
+.metacritic {
+    padding: 0rem 0.1rem;
+    color: var(--background-color);
+}
+
+.metacritic.meta-great {
+    background-color: var(--primary-color);
+}
+
+.metacritic.meta-good {
+    background-color: var(--accent-success);
+}
+
+.metacritic.meta-okay {
+    background-color: var(--accent-warning);
+}
+
+.metacritic.meta-bad {
+    background-color: var(--accent-danger);
+}
+
+.side-table td {
   padding: 0.5em 0;
 }
 
-td:last-of-type {
+.side-table td:last-of-type {
   text-align: right;
 }
 
@@ -290,7 +360,6 @@ td:last-of-type {
 .links a {
     padding: 0em 0.25em;
     font-size: 0.8rem;
-    /*border: 1px solid var(--muted-text-color);*/
 }
 
 .pc-req {
@@ -397,7 +466,6 @@ ul li {
 .cta {
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
   justify-content: center;
   gap: 0.5rem;
   margin: 0.8rem 0;
@@ -412,7 +480,6 @@ ul li {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
-  /*transition: background 0.25s ease;*/
   font-weight: 600;
 }
 
@@ -450,4 +517,49 @@ ul li {
 .back-home a:hover {
     background-color: #f5c2e7;
     color: var(--background-color);
+}
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1em;
+    border-bottom: 1px solid var(--surface-color);
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 1.25rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: var(--primary-color-light);
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    gap: 0.5rem;
+}
+
+.nav-logo img {
+    width: 1rem;
+    height: 1rem;
 }

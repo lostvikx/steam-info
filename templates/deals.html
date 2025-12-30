@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page {{ page_num }} - SteamInfo Deals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
+</head>
+<body>
+    <nav>
+        <a href="/" class="nav-logo">
+            <img src="{{ url_for('static', filename='favicon/android-chrome-512x512.png') }}" alt="SteamInfo Logo" class="logo">
+            <div>SteamInfo</div>
+        </a>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/deals/1">Deals</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Best Deals on Steam</h1>
+        <table class="deals">
+            <thead>
+                <tr>
+                    <th>Cover</th>
+                    <th>Title</th>
+                    <th>Discount</th>
+                    <th>Price</th>
+                    <th>Metacritic</th>
+                    <th>Rating</th>
+                    <th>Release</th>
+                    <!--<th>Score</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                {% for deal in deals.deals %}
+                        <tr>
+                            <td class="deal-img">
+                                <a href="/game/{{ deal.steam_appid }}">
+                                    <img src="{{ deal.thumb }}" alt="{{ deal.title }} thumbnail" loading="lazy">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/game/{{ deal.steam_appid }}" class="deal-title">
+                                    {{ deal.title }}
+                                </a>
+                            </td>
+                            <td class="num-col">{{ deal.discount }}&percnt;</td>
+                            <td class="num-col">{{ deal.currency }}{{ deal.sale_price }}</td>
+                            <td class="num-col">
+                                <span class="metacritic">{{ deal.metacritic }}</span>
+                            </td>
+                            <td class="num-col">{{ deal.steam_rating_percent }}&percnt;</td>
+                            <td class="release-timestamp text-col">{{ deal.release_date }}</td>
+                            <!--<td class="num-col">{{ deal.deal_rating }}</td>-->
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="steamdb">
+            Find more Steam deals on <a href="https://steamdb.info/sales/?cc=in&max_price=1000&min_discount=50&min_rating=90&min_reviews=5000&sort=rating_desc" target="_blank">SteamDB</a> website.
+        </p>
+    </div>
+    <script>
+        const releaseTimestamp = document.querySelectorAll(".release-timestamp");
+        const datetimes = Array.from(releaseTimestamp).map(timestamp => {
+            dt = new Date(parseInt(timestamp.textContent.trim()) * 1000);
+            const monthYear = dt.toLocaleDateString('en-US', {
+                month: 'short',
+                year: 'numeric'
+            });
+            return monthYear;
+        });
+
+        for (let i = 0; i < datetimes.length; i++) {
+            releaseTimestamp[i].textContent = datetimes[i];
+        }
+
+        const metacriticRatings = document.querySelectorAll(".metacritic");
+        for (let i = 0; i < metacriticRatings.length; i++) {
+            score = metacriticRatings[i].textContent;
+            if (score >= 90) {
+                metacriticRatings[i].classList.add("meta-great");
+            } else if (score >= 75) {
+                metacriticRatings[i].classList.add("meta-good");
+            } else if (score >= 50) {
+                metacriticRatings[i].classList.add("meta-okay");
+            } else {
+                metacriticRatings[i].classList.add("meta-bad");
+            }
+        }
+    </script>
+</body>
+</html>
