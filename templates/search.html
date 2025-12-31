@@ -32,7 +32,7 @@
 
             <div>
                 <form action="/search" method="get">
-                    <input type="text" name="q" placeholder="Search SteamInfo" value="{{ search_query }}">
+                    <input type="text" name="q" placeholder="Search SteamInfo" value="{{ search_query }}" autocomplete="off">
                     <button type="submit" class="btn buy">Search</button>
                 </form>
             </div>
@@ -59,13 +59,9 @@
                     </a>
                 {% endfor %}
             </div>
-
         {% else %}
             <p>Error: No search query provided.</p>
         {% endif %}
-        <!--<div class="back-home">
-            <a href="/" class="btn">Go Back</a>
-        </div>-->
     </div>
 </body>
 </html>

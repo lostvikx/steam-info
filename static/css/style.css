@@ -47,7 +47,8 @@ h2 {
 }
 
 .search-title {
-    margin-top: 0.5em;
+    margin: 2rem;
+    text-align: center;
 }
 
 p {
@@ -73,7 +74,7 @@ header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem auto;
 }
 
 header h1 {
@@ -298,7 +299,8 @@ thead {
 }
 
 .steamdb {
-    margin-top: 2rem;
+    text-align: center;
+    margin: 2rem;
 }
 
 .deals-section {
@@ -529,7 +531,7 @@ nav {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1em;
-    border-bottom: 1px solid var(--surface-color);
+    /*border-bottom: 1px solid var(--surface-color);*/
     margin-bottom: 1.25rem;
     display: flex;
     flex-direction: row;
@@ -589,4 +591,30 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hero img {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.hero p {
+    text-align: center;
+    margin: 2rem 0 0.5em 0;
+}
+
+.contributors {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contributors ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 1.25rem;
 }

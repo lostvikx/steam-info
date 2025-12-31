@@ -3,6 +3,7 @@
 <head>
     <title>SteamInfo - Home of Steam Information</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
@@ -13,14 +14,10 @@
         <div></div>
         <ul>
             <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
                 <a href="/deals/1">Deals</a>
             </li>
         </ul>
     </nav>
-
     <div class="container">
         <div class="flex">
             <header class="flexbox">
@@ -30,10 +27,25 @@
 
             <div>
                 <form action="/search" method="get">
-                    <input type="text" name="q" placeholder="Search SteamInfo">
+                    <input type="text" name="q" placeholder="Search SteamInfo" autocomplete="off">
                     <button type="submit" class="btn buy">Search</button>
                 </form>
             </div>
+        </div>
+
+        <p class="steamdb">An alternative to Steam for finding video games and <a href="/deals/1">hot deals</a>.</p>
+
+        <div class="hero">
+            <img src="{{ url_for('static', filename='img/wallhaven-dpwpwg.png') }}" alt="Hero image." loading="lazy">
+            <p>A special thanks to the various public APIs used in this project:</p>
+        </div>
+
+        <div class="contributors">
+            <ul>
+                <li><a href="https://store.steampowered.com/" target="_blank">Steam <i class="fa-solid fa-arrow-up-right-from-square"></i></a> &lpar;Obviously&rpar;</li>
+                <li><a href="https://www.protondb.com/" target="_blank">ProtonDB <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                <li><a href="https://apidocs.cheapshark.com/" target="_blank">CheapShark <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            </ul>
         </div>
     </div>
 </body>

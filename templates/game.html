@@ -151,7 +151,7 @@
                         </div>
                     {% endif %}
                 </div>
-                <p>{{ game.short_description }}</p>
+                <p>{{ game.short_description | safe }}</p>
 
                 {% if game.price %}
                     <div class="price">
@@ -205,15 +205,6 @@
                 <p>Could not fetch the game information data from Steam.</p>
             </div>
         {% endif %}
-
-        <!-- Background -->
-        <!--{% if game.background_raw %}
-            <div class="section">
-                <h2>Background</h2>
-                <img src="{{ game.background_raw }}">
-            </div>
-        {% endif %}-->
-
     </div>
     <script>
         const images = document.querySelectorAll(".slider img");
