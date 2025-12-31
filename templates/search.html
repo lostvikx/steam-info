@@ -24,10 +24,24 @@
         </ul>
     </nav>
     <div class="container">
-        <h1>Search Results</h1>
+        <div class="flex">
+            <header class="flexbox">
+                <img src="{{ url_for('static', filename='favicon/android-chrome-512x512.png') }}" alt="SteamInfo Logo" class="logo">
+                <h1>SteamInfo</h1>
+            </header>
+
+            <div>
+                <form action="/search" method="get">
+                    <input type="text" name="q" placeholder="Search SteamInfo" value="{{ search_query }}">
+                    <button type="submit" class="btn buy">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <h2 class="search-title">Search Results</h2>
 
         {% if search_query %}
-            <p>Results for: <strong>{{ search_query }}</strong></p>
+            <!--<p>Results for: <strong>{{ search_query }}</strong></p>-->
             <div class="results">
                 {% for game in search_results %}
                     <a href="/game/{{ game.id }}" class="result-item">
@@ -49,9 +63,9 @@
         {% else %}
             <p>Error: No search query provided.</p>
         {% endif %}
-        <div class="back-home">
+        <!--<div class="back-home">
             <a href="/" class="btn">Go Back</a>
-        </div>
+        </div>-->
     </div>
 </body>
 </html>

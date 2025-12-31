@@ -22,21 +22,19 @@
     </nav>
 
     <div class="container">
+        <div class="flex">
+            <header class="flexbox">
+                <img src="{{ url_for('static', filename='favicon/android-chrome-512x512.png') }}" alt="SteamInfo Logo" class="logo">
+                <h1>SteamInfo</h1>
+            </header>
 
-        <header class="flexbox">
-            <img src="{{ url_for('static', filename='favicon/android-chrome-512x512.png') }}" alt="SteamInfo Logo" class="logo">
-            <h1>SteamInfo</h1>
-        </header>
-
-        <div>
-            <form action="/search" method="get">
-                <input type="text" name="q" placeholder="Search SteamInfo">
-                <button type="submit" class="btn buy">Search</button>
-            </form>
+            <div>
+                <form action="/search" method="get">
+                    <input type="text" name="q" placeholder="Search SteamInfo">
+                    <button type="submit" class="btn buy">Search</button>
+                </form>
+            </div>
         </div>
-        <!--<p class="steamdb">
-            Find more Steam deals on <a href="https://steamdb.info/sales/?cc=in&max_price=1000&min_discount=50&min_rating=90&min_reviews=5000&sort=rating_desc" target="_blank">SteamDB</a> website.
-        </p>-->
     </div>
 </body>
 </html>

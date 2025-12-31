@@ -46,6 +46,10 @@ h2 {
     font-size: 2rem;
 }
 
+.search-title {
+    margin-top: 0.5em;
+}
+
 p {
     margin-bottom: 1em;
 }
@@ -74,11 +78,12 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 3rem;
 }
 
 .logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 input {
@@ -90,6 +95,7 @@ input {
     font-family: inherit;
     outline: none;
     font-size: 0.9rem;
+    width: 400px;
 }
 
 input::placeholder {
@@ -576,4 +582,11 @@ nav a:hover {
     pointer-events: none;
     cursor: not-allowed;
     opacity: 0.5;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
