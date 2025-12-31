@@ -127,6 +127,8 @@
                         <iframe src="https://steambase.io/embed/games/{{ game.steam_appid }}/prices" height="375" loading="lazy" style="border:0;width:100%;font-size:0.8rem;"></iframe>
                     </div>
                 </div>
+
+            <!--Sidebar-->
             <div class="side">
                 {% if game.header_image %}
                     <img src="{{ game.header_image }}" alt="{{ game.name }} header image." loading="lazy">
@@ -142,10 +144,12 @@
                         <div class="rate">{{ game.review_summary.positive_percentage }}&percnt;</div>
                         <div>Positive Reviews</div>
                     </div>
-                    <div>
-                        <div class="rate"">{{ game.tier | capitalize }}</div>
-                        <div>ProtonDB</div>
-                    </div>
+                    {% if game.tier %}
+                        <div>
+                            <div class="rate"">{{ game.tier | capitalize }}</div>
+                            <div>ProtonDB</div>
+                        </div>
+                    {% endif %}
                 </div>
                 <p>{{ game.short_description }}</p>
 

@@ -35,7 +35,6 @@
                     <th>Metacritic</th>
                     <th>Rating</th>
                     <th>Release</th>
-                    <!--<th>Score</th>-->
                 </tr>
             </thead>
             <tbody>
@@ -58,11 +57,19 @@
                             </td>
                             <td class="num-col">{{ deal.steam_rating_percent }}&percnt;</td>
                             <td class="release-timestamp text-col">{{ deal.release_date }}</td>
-                            <!--<td class="num-col">{{ deal.deal_rating }}</td>-->
                         </tr>
                 {% endfor %}
             </tbody>
         </table>
+
+        <div class="pagination">
+            {% if page_num > 1 %}
+                <a href="/deals/{{ page_num - 1 }}" class="btn">&lt; Previous Page</a>
+            {% else %}
+                <span class="btn disabled">&lt; Previous Page</span>
+            {% endif %}
+                <a href="/deals/{{ page_num + 1 }}" class="btn">Next Page &gt;</a>
+        </div>
 
         <p class="steamdb">
             Find more Steam deals on <a href="https://steamdb.info/sales/?cc=in&max_price=1000&min_discount=50&min_rating=90&min_reviews=5000&sort=rating_desc" target="_blank">SteamDB</a> website.

@@ -80,8 +80,8 @@ def game_info(appid:str, currency:str="IN") -> dict:
         try:
             info["developers"] = d.get("developers")[0]
             info["publishers"] = d.get("publishers")[0]
-        except IndexError as err:
-            print(f"Error in game info: {err}")
+        except Exception as err:
+            print(f"Error in getting publisher or developers: {err}")
             info["developers"] = None
             info["publishers"] = None
 
