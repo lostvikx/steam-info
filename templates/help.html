@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SteamInfo - Home of Steam Information</title>
+    <title>Help - SteamInfo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
@@ -11,7 +11,10 @@
 </head>
 <body>
     <nav>
-        <div></div>
+        <a href="/" class="nav-logo">
+            <img src="{{ url_for('static', filename='favicon/android-chrome-512x512.png') }}" alt="SteamInfo Logo" class="logo">
+            <div>SteamInfo</div>
+        </a>
         <ul>
             <li>
                 <a href="/help">Help</a>
@@ -27,29 +30,19 @@
                 <img src="{{ url_for('static', filename='favicon/android-chrome-512x512.png') }}" alt="SteamInfo Logo" class="logo">
                 <h1>SteamInfo</h1>
             </header>
-
-            <div>
-                <form action="/search" method="get">
-                    <input type="text" name="q" placeholder="Search SteamInfo" autocomplete="off">
-                    <button type="submit" class="btn buy">Search</button>
-                </form>
-            </div>
         </div>
-
-        <p class="steamdb">An alternative to Steam for finding video games and <a href="/deals/1">hot deals</a>.</p>
-
-        <div class="hero">
-            <img src="{{ url_for('static', filename='img/wallhaven-dpwpwg.png') }}" alt="Hero image." loading="lazy">
-            <p>A special thanks to the various public APIs used in this project:</p>
-        </div>
-
-        <div class="contributors">
-            <ul>
-                <li><a href="https://store.steampowered.com/" target="_blank">Steam <i class="fa-solid fa-arrow-up-right-from-square"></i></a> &lpar;Obviously&rpar;</li>
-                <li><a href="https://www.protondb.com/" target="_blank">ProtonDB <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                <li><a href="https://apidocs.cheapshark.com/" target="_blank">CheapShark <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-            </ul>
-        </div>
+        <article>
+                <p>This website was created to help me explore and view Steam games library. I own a laptop notebook which is not capable of smooth rendering of the steam website. And the autoplaying video is annoying to me. Another reason was to get relevant information about a video game in a single place and not scour the internet. This helps me save time by not opening multiple tabs on my computer.</p>
+                <p>The following are the features of this project:</p>
+                <ul>
+                    <li>Easily find desired video game.</li>
+                    <li>No autoplay video when viewing the video game page.</li>
+                    <li>Recent helpful reviews about the video game.</li>
+                    <li>Transparent pricing with price history chart.</li>
+                    <li>Find the best deals on Steam.</li>
+                </ul>
+                <p>Note: Please do not abuse this website with bots as the various APIs have a rate limit and will result in your IP being banned.</p>
+        </article>
     </div>
 </body>
 </html>

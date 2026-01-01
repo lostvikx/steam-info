@@ -68,5 +68,9 @@ def deal_page(page_num):
 
     return render_template("deals.html", deals=deals, page_num=page_num)
 
+@app.route("/help")
+def help():
+    return render_template("help.html")
+
 if __name__ == "__main__":
     app.run(port=8080, debug=True, host="0.0.0.0")
