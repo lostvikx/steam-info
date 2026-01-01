@@ -49,7 +49,7 @@ def search_results(search_query:str, lang:str="english", currency:str="IN") -> l
     return search_results
 
 def game_info(appid:str, currency:str="IN") -> dict:
-    # INFO: Rate Limit: Approximately 200 requests every 5 minutes per IP address.
+    # INFO: Rate limit of 200 requests per hour.
     # Backup: "https://www.protondb.com/proxy/steam/api/appdetails"
     url = "https://store.steampowered.com/api/appdetails"
     params = {
@@ -197,8 +197,9 @@ def wishlist(steamid:str="76561199589453674") -> dict:
         print(f"Error in fetching wishlist: {err}")
     return wishlist
 
-def steam_deals(store_id:int=1, page:int=0, sort_by:str="DealRating", upper_price:int=15, steam_rating:int=75, min_review_count:int=5000, page_size:int=50):
-    # INFO: https://apidocs.cheapshark.com/
+def steam_deals(store_id:int=1, page:int=0, sort_by:str="DealRating", upper_price:int=15, steam_rating:int=75, min_review_count:int=5000, page_size:int=50) -> dict:
+    # DOCS: https://apidocs.cheapshark.com/
+    # INFO: Rate limit of 100 requests per hour.
     url = "https://www.cheapshark.com/api/1.0/deals"
     params = {
         "storeID": store_id,
@@ -211,11 +212,13 @@ def steam_deals(store_id:int=1, page:int=0, sort_by:str="DealRating", upper_pric
     }
     deals = {
         "page_number": page,
-        "deals": [],
     }
     try:
         res = session.get(url, params=params)
         res.raise_for_status()
+
+        deals["total_pages"] = int(res.headers.get("X-Total-Page-Count", 1))
+        deals["deals"] = []
         data = res.json()
 
         for deal in data:
