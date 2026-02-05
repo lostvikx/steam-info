@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "flask>=3.1.2",
-    "langchain>=1.2.0",
-    "langchain-google-genai>=4.1.2",
     "numerize>=0.12",
+    "requests>=2.32.5",
 ]
